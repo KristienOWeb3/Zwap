@@ -1,0 +1,1194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="description" content="ZWAP  Crypto &amp; fiat payments made easy. Deposit crypto, buy any token by wallet address, save in stablecoins, withdraw to any bank."/>
+
+<meta name="google-site-verification" content="bgLFVc8FNyTT_N4WMap6NFGKnAqs1xnxrFIcz2EfYR8" />
+<title>ZWAP  Crypto &amp; Fiat Payments Made Easy</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet"/>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --k:#0A0A0A;--k2:#111;--k3:#1A1A1A;--k4:#222;
+  --gd:#333;--gm:#666;--gl:#999;--gx:#CCC;--g5:#555;
+  --w:#FFF;--bd:#2A2A2A;--bdl:#E5E5E5;
+  --fh:"Syne",sans-serif;--fb:"DM Sans",sans-serif;
+}
+html{scroll-behavior:smooth}
+body{font-family: 'Poppins', sans-serif;;background:var(--k);color:var(--w);overflow-x:hidden;line-height:1.7;font-size:16px}
+
+/* ── NAV — SEAMLESS DARK HEADER ── */
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:20px 64px;
+  background:rgba(10,10,10,0.85);
+  backdrop-filter:blur(24px);
+  border-bottom:1px solid rgba(255,255,255,0.06);
+}
+.logo{
+  font-family: 'Poppins', sans-serif;font-size:26px;font-weight:800;
+  color:#FFFFFF;
+  letter-spacing:-.5px;display:flex;align-items:center;gap:10px
+}
+.logo img{height:28px;width:auto}
+.nl{display:flex;gap:36px;list-style:none}
+.nl a{color:rgba(255,255,255,0.6);text-decoration:none;font-size:15px;font-weight:500;transition:color .2s}
+.nl a:hover{color:#FFFFFF}
+.nc{display:flex;gap:10px;align-items:center}
+.bg2{
+  padding:9px 20px;border:1.5px solid rgba(255,255,255,0.2);border-radius:8px;
+  color:rgba(255,255,255,0.7);background:transparent;font-family: 'Poppins', sans-serif;
+  font-size:14px;font-weight:500;cursor:pointer;transition:all .2s;
+  text-decoration:none;display:inline-block
+}
+.bg2:hover{border-color:#FFFFFF;color:#FFFFFF}
+.bp2{
+  padding:9px 22px;background:#FFFFFF;border:none;border-radius:8px;
+  color:#0A0A0A;font-family:var(--fb);font-size:14px;font-weight:700;
+  cursor:pointer;transition:all .2s;text-decoration:none;display:inline-block
+}
+.bp2:hover{background:var(--gx);transform:translateY(-1px)}
+
+/* ── HERO ── */
+.hero{min-height:100vh;display:flex;align-items:center;padding:130px 64px 90px;position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse 55% 50% at 15% 40%,rgba(255,255,255,.04) 0%,transparent 65%);pointer-events:none}
+.hi{max-width:1200px;margin:0 auto;width:100%;display:grid;grid-template-columns:1fr 1.05fr;gap:72px;align-items:center}
+
+.hbadge{display:inline-flex;align-items:center;gap:9px;border:1px solid var(--bd);background:var(--k3);padding:7px 16px;border-radius:100px;font-size:13px;color:var(--gl);margin-bottom:32px}
+.hbdot{width:7px;height:7px;border-radius:50%;background:var(--w);animation:pulse 2.5s infinite}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.4;transform:scale(1.6)}}
+
+h1.hero-h1{font-family: 'Poppins', sans-serif;font-size:clamp(48px,5.5vw,76px);font-weight:800;line-height:1.06;letter-spacing:-2px;margin-bottom:28px}
+h1.hero-h1 .dim{color:var(--gm)}
+
+.hsub{font-size:18px;color:var(--gl);max-width:480px;line-height:1.85;margin-bottom:44px}
+.ha{display:flex;gap:14px;flex-wrap:wrap}
+.bh2{
+  padding:16px 32px;background:var(--w);border:none;border-radius:10px;
+  color:var(--k);font-family: 'Poppins', sans-serif;font-size:15px;font-weight:700;
+  cursor:pointer;transition:all .2s;text-decoration:none;
+  display:inline-flex;align-items:center;gap:8px
+}
+.bh2:hover{background:var(--gx);transform:translateY(-2px);box-shadow:0 10px 28px rgba(255,255,255,.1)}
+.bho2{
+  padding:16px 32px;background:transparent;border:1px solid var(--bd);
+  border-radius:10px;color:var(--gx);font-family:var(--fh);
+  font-size:15px;font-weight:600;cursor:pointer;transition:all .2s;
+  text-decoration:none;display:inline-block
+}
+.bho2:hover{border-color:var(--w);color:var(--w)}
+.hstats{display:flex;gap:44px;margin-top:52px;padding-top:36px;border-top:1px solid var(--bd)}
+.snum{font-family: 'Poppins', sans-serif;font-size:28px;font-weight:800;color:var(--w);letter-spacing:-.5px}
+.slbl{font-size:13px;color:var(--gm);margin-top:4px}
+
+/* ── PHONE MOCKUP (hero right) — 3D Scroll Animation ── */
+.hero-mockup{display:flex;justify-content:center;align-items:center;position:relative;padding:20px 0;perspective:1200px}
+.phone-outer{transform-style:preserve-3d;transition:transform .05s linear}
+
+/* Feature section images */
+.sc-img{width:100%;max-width:260px;border-radius:16px;margin-top:18px;display:block;box-shadow:0 8px 30px rgba(0,0,0,.4);border:1px solid rgba(255,255,255,.06)}
+.pc-img{width:100%;max-width:120px;border-radius:12px;margin-top:14px;display:block;box-shadow:0 6px 20px rgba(0,0,0,.35);border:1px solid rgba(255,255,255,.06)}
+
+/* Floating decorative particles */
+.float-particle{position:fixed;pointer-events:none;z-index:0;font-size:20px;opacity:0.07;animation:floatDrift linear infinite;will-change:transform}
+@keyframes floatDrift{0%{transform:translateY(0) rotate(0deg)}50%{transform:translateY(-30px) rotate(180deg)}100%{transform:translateY(0) rotate(360deg)}}
+
+/* Staggered text entrance */
+.txt-stagger{opacity:0;transform:translateY(24px);transition:opacity .7s cubic-bezier(.25,.46,.45,.94),transform .7s cubic-bezier(.25,.46,.45,.94)}
+.txt-stagger.in{opacity:1;transform:translateY(0)}
+
+/* Bounce 'Almost EVERYWHERE' */
+.bounce-text{display:inline-block;font-family:'Poppins',sans-serif;font-weight:800;color:var(--w);opacity:0;transform:scale(0);transition:none}
+.bounce-text.animate{animation:bounceScaleIn .8s cubic-bezier(.17,.89,.32,1.35) forwards}
+@keyframes bounceScaleIn{0%{opacity:0;transform:scale(0)}60%{opacity:1;transform:scale(1.15)}80%{transform:scale(0.95)}100%{opacity:1;transform:scale(1)}}
+
+/* Card section dark bg for bounce text */
+.cds .sh{margin-bottom:8px}
+.cds .everywhere-line{margin-bottom:20px}
+.phone-outer{
+  width:280px;
+  background:#0A0A0A;
+  border-radius:44px;
+  border:2px solid #2a2a2a;
+  padding:14px;
+  box-shadow:0 50px 100px rgba(0,0,0,.9),0 0 0 1px rgba(255,255,255,.06);
+  position:relative;
+}
+.phone-outer::before{
+  content:"";position:absolute;top:0;left:50%;transform:translateX(-50%);
+  width:80px;height:26px;background:#0A0A0A;border-radius:0 0 18px 18px;z-index:10;
+}
+.phone-screen{
+  background:#F0F0F2;
+  border-radius:32px;
+  overflow:hidden;
+  min-height:540px;
+  font-family: 'Poppins', sans-serif;
+}
+.s-bar{
+  background:#F0F0F2;padding:12px 18px 5px;
+  display:flex;justify-content:space-between;align-items:center;
+  font-size:12px;font-weight:700;color:#000;
+}
+.s-right{display:flex;gap:5px;align-items:center;font-size:11px}
+
+.app-body{padding:0 16px 16px;background:#F0F0F2}
+
+.app-header{display:flex;justify-content:space-between;align-items:center;padding:10px 0 14px}
+.app-user{display:flex;align-items:center;gap:9px}
+.app-av{width:30px;height:30px;border-radius:50%;background:#1a1a1a;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:800;color:#fff}
+.app-uname{font-size:13px;font-weight:700;color:#000}
+.app-zid{font-size:10px;color:#888}
+.app-icons{display:flex;gap:10px}
+.app-icon-btn{width:26px;height:26px;background:#e8e8ea;border-radius:7px;display:flex;align-items:center;justify-content:center;font-size:11px}
+
+.bal-card{
+  background:#0D0D0D;border-radius:20px;padding:18px;margin-bottom:16px;
+  position:relative;overflow:hidden;
+}
+.bal-label{font-size:10px;color:#888;text-align:center;text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px}
+/* FIXED: Naira balance display - larger and clear */
+.bal-amount{font-family: 'Poppins', sans-serif;font-size:22px;font-weight:800;color:#fff;text-align:center;letter-spacing:-.5px;white-space:nowrap}
+.bal-naira{font-size:11px;color:#666;text-align:center;margin-top:3px;margin-bottom:12px}
+.mini-chart{height:46px;position:relative;margin-bottom:10px}
+.mini-chart svg{width:100%;height:100%}
+.chart-months{display:flex;justify-content:space-between;padding:0 2px;margin-bottom:12px}
+.chart-month{font-size:9px;color:#444}
+.bal-actions{display:flex;gap:9px}
+.bal-btn{flex:1;padding:9px 0;border-radius:11px;text-align:center;font-size:12px;font-weight:700;cursor:pointer}
+.bal-btn.dep{background:#1a1a1a;color:#fff;border:1px solid #333}
+.bal-btn.bank{background:#fff;color:#000;border:none}
+
+.quick-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:7px;margin-bottom:16px}
+.q-item{display:flex;flex-direction:column;align-items:center;gap:6px}
+.q-icon{width:38px;height:38px;background:#fff;border-radius:11px;display:flex;align-items:center;justify-content:center;font-size:15px;box-shadow:0 1px 4px rgba(0,0,0,.08)}
+.q-label{font-size:10px;color:#555;font-weight:500}
+
+.txn-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:9px}
+.txn-title{font-size:13px;font-weight:700;color:#000}
+.txn-see{font-size:11px;color:#888}
+.txn-item{background:#fff;border-radius:11px;padding:10px 11px;margin-bottom:7px;display:flex;align-items:center;gap:9px}
+.txn-av{width:30px;height:30px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:800;color:#fff;flex-shrink:0}
+.txn-av.dav{background:#888}
+.txn-av.dbl{background:#1a6ef5}
+.txn-av.pur{background:#7c3aed}
+.txn-info{flex:1}
+.txn-name{font-size:12px;font-weight:600;color:#000}
+.txn-meta{font-size:10px;color:#999}
+.txn-amt{font-size:12px;font-weight:700}
+.txn-amt.pos{color:#16a34a}
+.txn-amt.neg{color:#dc2626}
+
+.bottom-nav{display:flex;justify-content:space-around;padding:9px 0 5px;background:#F0F0F2;border-top:1px solid #e5e5e5;margin:0 -16px}
+.bnav-item{display:flex;flex-direction:column;align-items:center;gap:3px;flex:1}
+.bnav-ico{font-size:15px}
+.bnav-label{font-size:9px;color:#999}
+.bnav-item.active .bnav-label{color:#000}
+.bnav-home{width:36px;height:20px;background:#1a1a1a;border-radius:10px;margin:2px 0}
+
+.flt-card{
+  position:absolute;background:#1a1a1a;border:1px solid #2a2a2a;
+  border-radius:12px;padding:12px 16px;font-size:12px;backdrop-filter:blur(10px);
+}
+.flt-card.fc-tl{top:50px;left:-110px;animation:fla 4s ease-in-out infinite}
+.flt-card.fc-br{bottom:90px;right:-100px;animation:flb 4s ease-in-out infinite 1.2s}
+@keyframes fla{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+@keyframes flb{0%,100%{transform:translateY(0)}50%{transform:translateY(8px)}}
+.flt-lbl{font-size:11px;color:var(--gl);margin-bottom:4px}
+.flt-val{font-size:14px;font-weight:700;color:var(--w)}
+.flt-ok{font-size:11px;color:#aaa;margin-top:3px}
+
+/* ── SECTIONS ── */
+section{padding:104px 64px;position:relative}
+.con{max-width:1200px;margin:0 auto;width:100%}
+.div{height:1px;background:var(--bd)}
+.ew{font-size:12px;letter-spacing:3px;text-transform:uppercase;color:var(--gm);font-weight:600;margin-bottom:16px}
+.sh{font-family: 'Poppins', sans-serif;font-size:clamp(32px,3.8vw,50px);font-weight:800;line-height:1.12;letter-spacing:-1px;margin-bottom:20px}
+.ss{font-size:17px;color:var(--gm);max-width:540px;line-height:1.85}
+
+/* ── SHOWCASE ── */
+.showcase-sec{background:var(--k2)}
+.showcase-inner{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.showcase-pills{display:flex;flex-wrap:wrap;gap:9px;margin-top:32px}
+.pill{padding:8px 16px;background:var(--k3);border:1px solid var(--bd);border-radius:100px;font-size:13px;color:var(--gx);font-weight:500}
+
+.desktop-frame{
+  background:#1a1a1a;border:1px solid #2a2a2a;border-radius:16px;overflow:hidden;
+  box-shadow:0 30px 60px rgba(0,0,0,.7);
+}
+.desktop-bar{
+  background:#111;padding:11px 18px;display:flex;align-items:center;gap:8px;
+  border-bottom:1px solid #222;
+}
+.desk-dot{width:10px;height:10px;border-radius:50%}
+.desk-url{flex:1;background:#1a1a1a;border-radius:6px;padding:5px 12px;font-size:11px;color:#555;font-family:monospace;margin:0 12px}
+.desk-body{padding:0;background:#F0F2F5}
+
+/* Dashboard header */
+.db-header{background:#fff;padding:14px 22px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #eee}
+.db-logo{font-family: 'Poppins', sans-serif;font-size:16px;font-weight:800;color:#000}
+.db-nav{display:flex;gap:18px}
+.db-nav-item{font-size:11px;color:#888;cursor:pointer}
+.db-nav-item.active{color:#000;font-weight:600}
+.db-user{display:flex;align-items:center;gap:9px}
+.db-av{width:26px;height:26px;border-radius:50%;background:#000;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:800;color:#fff}
+.db-uname{font-size:11px;font-weight:600;color:#000}
+
+.db-content{display:grid;grid-template-columns:230px 1fr;gap:0;min-height:300px}
+.db-sidebar{background:#fff;padding:16px 14px;border-right:1px solid #eee}
+.db-menu-item{display:flex;align-items:center;gap:9px;padding:8px 9px;border-radius:8px;font-size:11px;color:#888;margin-bottom:3px;cursor:pointer}
+.db-menu-item.active{background:#f5f5f5;color:#000;font-weight:600}
+.db-menu-icon{font-size:13px;width:16px}
+
+.db-main{padding:18px 20px;background:#F0F2F5}
+.db-cards-row{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:16px}
+.db-card{background:#fff;border-radius:11px;padding:14px 16px;border:1px solid #eee}
+.db-card.dark{background:#0D0D0D;border-color:#222}
+.dbc-label{font-size:10px;color:#aaa;text-transform:uppercase;letter-spacing:.5px;margin-bottom:5px}
+/* FIXED: Dashboard balance - clear, readable */
+.dbc-val{font-family: 'Poppins', sans-serif;font-size:16px;font-weight:800;color:#000;letter-spacing:-.3px;white-space:nowrap}
+.db-card.dark .dbc-label{color:#666}
+.db-card.dark .dbc-val{color:#fff}
+.dbc-sub{font-size:9px;color:#aaa;margin-top:3px}
+.db-card.dark .dbc-sub{color:#555}
+
+.db-txn-section{background:#fff;border-radius:11px;padding:14px 16px;border:1px solid #eee}
+.db-txn-head{display:flex;justify-content:space-between;margin-bottom:12px}
+.db-txn-title{font-size:11px;font-weight:700;color:#000}
+.db-txn-see{font-size:10px;color:#aaa}
+.db-txn-row{display:flex;align-items:center;gap:9px;padding:7px 0;border-bottom:1px solid #f5f5f5}
+.db-txn-row:last-child{border:none}
+.db-txn-av{width:24px;height:24px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:800;color:#fff}
+.db-txn-nm{font-size:10px;font-weight:600;color:#000;flex:1}
+.db-txn-meta{font-size:9px;color:#aaa}
+.db-txn-amt{font-size:10px;font-weight:700}
+.db-green{color:#16a34a}.db-red{color:#dc2626}
+
+/* ── HOW IT WORKS ── */
+.how{background:var(--k2)}
+.sg{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin-top:60px;border:1px solid var(--bd);border-radius:16px;overflow:hidden}
+.sc{background:var(--k2);padding:44px 34px;border-right:1px solid var(--bd);transition:background .3s}
+.sc:last-child{border-right:none}
+.sc:hover{background:var(--k3)}
+.snu{font-family: 'Poppins', sans-serif;font-size:48px;font-weight:800;color:var(--bd);line-height:1;margin-bottom:20px}
+.sic{font-size:28px;margin-bottom:16px}
+.sti{font-family: 'Poppins', sans-serif;font-size:19px;font-weight:700;color:var(--w);margin-bottom:12px}
+.sde{font-size:15px;color:var(--gm);line-height:1.8}
+
+/* ── PILLARS ── */
+.pils{background:var(--k)}
+.pg{display:grid;grid-template-columns:repeat(5,1fr);gap:0;margin-top:60px;border:1px solid var(--bd);border-radius:16px;overflow:hidden}
+.pc{padding:36px 28px;border-right:1px solid var(--bd);transition:background .3s;position:relative}
+.pc:last-child{border-right:none}
+.pc:hover{background:var(--k3)}
+.pc::before{content:"";position:absolute;top:0;left:0;right:0;height:2px;background:var(--w);opacity:0;transition:opacity .3s}
+.pc:hover::before{opacity:1}
+.pn{font-family: 'Poppins', sans-serif;font-size:13px;font-weight:700;color:var(--bd);margin-bottom:20px;letter-spacing:1px}
+.pic{font-size:26px;margin-bottom:16px}
+.pt{font-family:var(--fh);font-size:16px;font-weight:700;color:var(--w);margin-bottom:10px;line-height:1.3}
+.pd{font-size:13px;color:var(--gm);line-height:1.8}
+
+/* ── VIEWS SECTION ── */
+.views-sec{background:var(--k2)}
+.views-intro{text-align:center;margin-bottom:72px}
+.views-intro .ss{margin-inline:auto}
+.phone-views-row{display:flex;justify-content:center;gap:40px;margin-bottom:88px;flex-wrap:wrap}
+.pv-wrap{display:flex;flex-direction:column;align-items:center;gap:16px}
+.pv-label{font-size:12px;color:var(--gm);letter-spacing:2px;text-transform:uppercase}
+
+.desktop-view-wrap{max-width:1020px;margin:0 auto}
+.dv-label{font-size:12px;color:var(--gm);letter-spacing:2px;text-transform:uppercase;text-align:center;margin-bottom:18px}
+
+.ps2{
+  width:228px;background:#0A0A0A;border-radius:38px;border:2px solid #2a2a2a;
+  padding:12px;box-shadow:0 30px 70px rgba(0,0,0,.8),0 0 0 1px rgba(255,255,255,.05);
+  position:relative;
+}
+.ps2::before{content:"";position:absolute;top:0;left:50%;transform:translateX(-50%);width:60px;height:20px;background:#0A0A0A;border-radius:0 0 14px 14px;z-index:10}
+.ps2-screen{background:#F0F0F2;border-radius:28px;overflow:hidden;min-height:420px}
+
+/* Buy crypto screen */
+.buy-screen{background:#F0F0F2;padding:14px 13px;min-height:420px;font-family:var(--fb)}
+.buy-back{font-size:11px;color:#000;margin-bottom:12px;font-weight:600}
+.buy-title-s{font-family:var(--fh);font-size:16px;font-weight:800;color:#000;margin-bottom:5px}
+.buy-sub-s{font-size:10px;color:#888;margin-bottom:16px}
+.buy-field{background:#fff;border-radius:11px;padding:11px 13px;margin-bottom:9px}
+.buy-field-label{font-size:9px;color:#888;margin-bottom:4px;text-transform:uppercase;letter-spacing:.5px}
+.buy-field-val{font-size:13px;font-weight:600;color:#000}
+.buy-field-sub{font-size:9px;color:#aaa;margin-top:2px}
+.buy-network-row{display:flex;gap:7px;margin-bottom:12px}
+.buy-net{padding:6px 11px;background:#fff;border-radius:9px;font-size:10px;font-weight:600;color:#888;border:1px solid #e5e5e5}
+.buy-net.active{background:#000;color:#fff;border-color:#000}
+.buy-fee-box{background:#f5f5f5;border-radius:11px;padding:11px;margin-bottom:14px}
+.buy-fee-row{display:flex;justify-content:space-between;margin-bottom:4px}
+.buy-fee-label{font-size:10px;color:#888}
+.buy-fee-val{font-size:10px;font-weight:600;color:#000}
+.buy-fee-row.total .buy-fee-label{font-weight:700;color:#000}
+.buy-fee-row.total .buy-fee-val{color:#000}
+.buy-cta-btn{width:100%;background:#000;border-radius:11px;padding:11px;text-align:center;font-size:12px;font-weight:700;color:#fff}
+
+/* Savings screen */
+.save-screen{background:#F0F0F2;padding:13px;min-height:420px;font-family:var(--fb)}
+.save-vault-card{background:#0D0D0D;border-radius:15px;padding:15px;margin-bottom:12px}
+.svc-label{font-size:10px;color:#666;margin-bottom:3px}
+.svc-amount{font-family:var(--fh);font-size:20px;font-weight:800;color:#fff}
+.svc-usd{font-size:10px;color:#555;margin-top:2px}
+.svc-yield{display:inline-flex;align-items:center;gap:5px;background:rgba(255,255,255,.06);border-radius:7px;padding:4px 9px;font-size:10px;color:#aaa;margin-top:9px}
+.svc-dot{width:5px;height:5px;border-radius:50%;background:#4ade80}
+.vault-options{display:grid;grid-template-columns:1fr 1fr;gap:7px;margin-bottom:12px}
+.vo{background:#fff;border-radius:11px;padding:10px;text-align:center}
+.vo.active{background:#000}
+.vo-period{font-size:10px;color:#888;margin-bottom:3px}
+.vo.active .vo-period{color:#666}
+.vo-rate{font-size:14px;font-weight:800;color:#000}
+.vo.active .vo-rate{color:#fff}
+.vo-label{font-size:9px;color:#aaa}
+
+/* UVP section */
+.uvps{background:var(--k3)}
+.ui{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+.ul{list-style:none;margin-top:36px}
+.ul li{display:flex;gap:18px;padding:24px 0;border-bottom:1px solid var(--bd)}
+.ul li:last-child{border-bottom:none}
+.un{font-family:var(--fh);font-size:13px;font-weight:800;color:var(--bd);margin-top:2px;min-width:28px}
+.ut{font-family:var(--fh);font-size:16px;font-weight:700;color:var(--w);margin-bottom:7px}
+.ud{font-size:14px;color:var(--gm);line-height:1.8}
+.term{background:var(--k);border:1px solid var(--bd);border-radius:16px;overflow:hidden;box-shadow:0 20px 40px rgba(0,0,0,.6)}
+.tb{background:var(--k3);padding:13px 18px;display:flex;align-items:center;gap:8px;border-bottom:1px solid var(--bd)}
+.td{width:11px;height:11px;border-radius:50%}
+.tt2{font-size:11px;color:var(--gm);margin-left:8px;font-family:monospace}
+.tbody{padding:22px;font-family:monospace;font-size:12px;line-height:2.1}
+.tk{color:var(--gm)}.tv{color:var(--w)}.tok{color:var(--gx)}.tdm{color:var(--gd)}
+.blink{animation:blink 1s step-end infinite}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:0}}
+
+/* Card section */
+.cds{background:var(--k)}
+.ci{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+.cv{position:relative;height:300px;display:flex;align-items:center;justify-content:center}
+.vw{position:absolute;width:340px;height:214px;border-radius:18px;padding:24px;display:flex;flex-direction:column;justify-content:space-between;transition:all 0.4s ease}
+.vm{background:linear-gradient(135deg, #ffffff 0%, #f0f0f0 100%);box-shadow:0 25px 50px rgba(0,0,0,.3);z-index:2;transform:rotate(0deg)}
+.vb{background:linear-gradient(135deg, #1a1a1a 0%, #333 100%);border:1px solid #444;z-index:1;transform:rotate(4deg) translateX(30px)}
+.vn{font-family:var(--fh);font-size:18px;font-weight:700;letter-spacing:3px}
+.vm .vn{color:var(--k)}
+.vb .vn{color:var(--gl)}
+.vrow{display:flex;justify-content:space-between;align-items:flex-end}
+.vfl{font-size:11px;text-transform:uppercase;letter-spacing:.5px}
+.vm .vfl{color:var(--gm)}
+.vb .vfl{color:var(--gd)}
+.vfv{font-size:14px;font-weight:700;font-family:var(--fh)}
+.vm .vfv{color:var(--k)}
+.vb .vfv{color:var(--gl)}
+.vvisa{font-family:var(--fh);font-size:22px;font-weight:800}
+.vm .vvisa{color:#1a1a1a;font-style:italic}
+.vb .vvisa{color:var(--gd)}
+.cfl{list-style:none;margin-top:36px}
+.cfl li{display:flex;gap:14px;align-items:flex-start;padding:13px 0;border-bottom:1px solid var(--bd);font-size:15px;color:var(--gx)}
+.cfl li:last-child{border:none}
+.cfd{width:6px;height:6px;border-radius:50%;background:var(--w);flex-shrink:0;margin-top:8px}
+
+
+.fw{max-width:720px;margin:60px auto 0}
+.fi2{border-bottom:1px solid var(--bd)}
+.fb2{width:100%;background:none;border:none;color:var(--w);font-family:var(--fb);font-size:16px;font-weight:500;text-align:left;padding:22px 0;cursor:pointer;display:flex;justify-content:space-between;align-items:center;transition:color .2s}
+.fb2:hover{color:var(--gl)}
+.fa2{font-size:20px;color:var(--gm);transition:transform .3s}
+.fba{font-size:15px;color:var(--gm);line-height:1.85;max-height:0;overflow:hidden;transition:max-height .4s ease,padding .3s}
+.fi2.open .fba{max-height:220px;padding-bottom:22px}
+.fi2.open .fa2{transform:rotate(45deg)}
+
+/* CTA */
+.ctas-sec{background:var(--w);text-align:center;padding:104px 64px}
+.ctat{font-family:var(--fh);font-size:clamp(38px,5vw,64px);font-weight:800;color:var(--k);letter-spacing:-1.5px;line-height:1.08;margin-bottom:20px}
+.ctas-sub{font-size:18px;color:var(--gm);margin-bottom:44px;max-width:460px;margin-inline:auto;line-height:1.8}
+.ctab{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.bcm{padding:16px 32px;background:var(--k);border:none;border-radius:10px;color:var(--w);font-family:var(--fh);font-size:15px;font-weight:700;cursor:pointer;transition:all .2s;text-decoration:none;display:inline-block}
+.bcm:hover{background:var(--gd);transform:translateY(-2px)}
+.bco{padding:16px 32px;background:transparent;border:1px solid var(--bdl);border-radius:10px;color:var(--k);font-family:var(--fh);font-size:15px;font-weight:600;cursor:pointer;transition:all .2s;text-decoration:none;display:inline-block}
+.bco:hover{border-color:var(--k)}
+
+/* Footer */
+footer{background:var(--k2);border-top:1px solid var(--bd);padding:64px 64px 36px}
+.fg2{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:2.2fr 1fr 1fr 1fr;gap:48px;padding-bottom:48px;border-bottom:1px solid var(--bd)}
+.flo{font-family:var(--fh);font-size:24px;font-weight:800;color:var(--w);margin-bottom:14px}
+.fde{font-size:14px;color:var(--gm);line-height:1.8;max-width:260px}
+.fcol h4{font-family:var(--fh);font-size:12px;font-weight:700;color:var(--w);margin-bottom:18px;letter-spacing:1px;text-transform:uppercase}
+.fcol ul{list-style:none}
+.fcol li{margin-bottom:12px}
+.fcol a{font-size:14px;color:var(--gm);text-decoration:none;transition:color .2s}
+.fcol a:hover{color:var(--w)}
+.fbot{max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;padding-top:28px}
+.fcp{font-size:12px;color:var(--gd)}
+.fso{display:flex;gap:10px}
+.sb{width:34px;height:34px;border-radius:8px;border:1px solid var(--bd);background:transparent;display:flex;align-items:center;justify-content:center;color:var(--gm);font-size:13px;cursor:pointer;transition:all .2s;text-decoration:none}
+.sb:hover{border-color:var(--w);color:var(--w)}
+
+/* Reveal — enhanced with scale + stagger */
+.rv{opacity:0;transform:translateY(30px) scale(0.95);transition:opacity .7s cubic-bezier(.25,.46,.45,.94),transform .7s cubic-bezier(.25,.46,.45,.94);will-change:opacity,transform}
+.rv.in{opacity:1;transform:translateY(0) scale(1)}
+
+/* 3D Tilt perspective container */
+.phone-outer,.desktop-frame{transition:transform .15s ease-out;transform-style:preserve-3d;will-change:transform}
+.hero-mockup{perspective:800px}
+.showcase-inner{perspective:1200px}
+
+/* Glare overlay for 3D tilt mockups */
+.tilt-glare{position:absolute;inset:0;pointer-events:none;border-radius:inherit;overflow:hidden;z-index:20}
+.tilt-glare-inner{position:absolute;top:-50%;left:-50%;width:200%;height:200%;background:radial-gradient(circle at 50% 50%,rgba(255,255,255,.18) 0%,transparent 60%);opacity:0;transition:opacity .3s}
+.phone-outer:hover .tilt-glare-inner,.desktop-frame:hover .tilt-glare-inner{opacity:1}
+
+/* Ambient glow blobs */
+.ambient-glow{position:absolute;border-radius:50%;filter:blur(120px);pointer-events:none;opacity:0.04;will-change:transform}
+.ambient-glow.g1{width:500px;height:500px;background:radial-gradient(circle,rgba(255,255,255,.9),transparent 70%);top:15%;left:5%;animation:ambFloat 12s ease-in-out infinite}
+.ambient-glow.g2{width:400px;height:400px;background:radial-gradient(circle,rgba(200,200,255,.8),transparent 70%);bottom:10%;right:10%;animation:ambFloat 15s ease-in-out infinite 3s}
+.ambient-glow.g3{width:350px;height:350px;background:radial-gradient(circle,rgba(180,200,255,.7),transparent 70%);top:20%;right:25%;animation:ambFloat 18s ease-in-out infinite 6s}
+@keyframes ambFloat{0%,100%{transform:translate(0,0) scale(1)}25%{transform:translate(30px,-20px) scale(1.05)}50%{transform:translate(-20px,30px) scale(0.95)}75%{transform:translate(15px,15px) scale(1.02)}}
+
+/* Magnetic buttons */
+.bh2,.bp2,.bcm{transition:all .2s ease-out;will-change:transform;position:relative;overflow:hidden}
+.bh2:active,.bp2:active,.bcm:active,.bho2:active,.bg2:active,.bco:active{transform:scale(0.96)!important}
+
+/* Ripple effect */
+.btn-ripple{position:absolute;border-radius:50%;background:rgba(255,255,255,.25);transform:scale(0);animation:rippleAnim .6s ease-out forwards;pointer-events:none}
+@keyframes rippleAnim{to{transform:scale(4);opacity:0}}
+
+/* Counter animation helper */
+.snum[data-target]{transition:color .3s}
+
+/* Parallax float cards */
+.flt-card{will-change:transform;transition:transform .1s linear}
+
+/* Mobile Menu */
+.mobile-menu-overlay{
+  position:fixed;top:0;left:0;right:0;bottom:0;
+  background:rgba(0,0,0,.98);z-index:99;
+  display:flex;flex-direction:column;justify-content:center;align-items:center;
+  opacity:0;visibility:hidden;transition:opacity 0.3s;
+}
+.mobile-menu-overlay.open{opacity:1;visibility:visible}
+.mobile-menu-overlay a{
+  color:#fff;font-size:26px;margin:16px 0;
+  text-decoration:none;font-family: 'Poppins', sans-serif;font-weight:700;
+}
+.close-btn{
+  position:absolute;top:22px;right:22px;color:#fff;font-size:30px;cursor:pointer;
+  width:44px;height:44px;border-radius:50%;background:rgba(255,255,255,.1);
+  display:flex;align-items:center;justify-content:center;transition:background .3s;
+}
+.close-btn:hover{background:rgba(255,255,255,.2)}
+.menu-toggle{
+  display:none;font-size:24px;color:#FFFFFF;cursor:pointer;z-index:101;
+  width:42px;height:42px;border-radius:8px;background:rgba(255,255,255,.1);
+  align-items:center;justify-content:center;transition:background .3s;
+}
+.menu-toggle:hover{background:rgba(255,255,255,.2)}
+
+/* ── MOBILE ── */
+@media(max-width:960px){
+  nav{padding:16px 24px}
+  .nl{display:none}
+  .nc .bg2,.nc .bp2{display:none}
+  .menu-toggle{display:flex}
+  section{padding:72px 24px}
+  .hero{padding:110px 24px 72px}
+  .hi{grid-template-columns:1fr}
+  .hero-mockup{display:none}
+  .hstats{flex-wrap:wrap;gap:24px;justify-content:space-between}
+  .hsub{margin-bottom:36px;font-size:16px}
+  .sg{grid-template-columns:1fr}
+  .pg{grid-template-columns:1fr 1fr}
+  .showcase-inner,.ui,.ci{grid-template-columns:1fr}
+  .phone-views-row{gap:24px;margin-bottom:48px}
+  .desktop-view-wrap{display:none}
+  .ui{gap:44px}
+  .term{margin-top:36px}
+  .cv{height:400px;margin-top:36px}
+  footer{padding:48px 24px 28px}
+  .fg2{grid-template-columns:1fr 1fr;gap:36px}
+  .fbot{flex-direction:column;gap:14px}
+  .ctas-sec{padding:72px 24px}
+}
+
+@media(max-width:600px){
+  .pg{grid-template-columns:1fr}
+  .hstats{gap:18px}
+  .snum{font-size:22px}
+}
+</style>
+</head>
+<body>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu-overlay" id="mobileMenu">
+  <div class="close-btn" onclick="toggleMenu()">×</div>
+  <a href="#how" onclick="toggleMenu()">How It Works</a>
+  <a href="#features" onclick="toggleMenu()">Features</a>
+  <a href="#views" onclick="toggleMenu()">App Views</a>
+  <a href="#card" onclick="toggleMenu()">Card</a>
+  <a href="#faq" onclick="toggleMenu()">FAQ</a>
+  <div style="margin-top:32px;display:flex;gap:14px">
+    <a href="https://usezwap.com/login_auth" style="display:block;padding:12px 26px;border:1.5px solid #fff;border-radius:8px;font-size:15px">Log In</a>
+    <a href="https://usezwap.com/user_register" style="display:block;padding:12px 26px;background:#fff;color:#000;border-radius:8px;font-size:15px;font-weight:700">Get Started</a>
+  </div>
+</div>
+
+<!-- NAV — SEAMLESS DARK HEADER -->
+<nav>
+  <div class="logo">
+    <img src="favicon.ico" alt="ZWAP Logo">
+    <span>ZWAP</span>
+  </div>
+  <ul class="nl">
+    <li><a href="#how">How It Works</a></li>
+    <li><a href="#features">Features</a></li>
+    <li><a href="#views">App Views</a></li>
+    <li><a href="#card">Card</a></li>
+    <li><a href="#faq">FAQ</a></li>
+  </ul>
+  <div class="nc">
+    <a href="https://usezwap.com/login_auth" class="bg2">Log In</a>
+    <a href="https://usezwap.com/user_register" class="bp2">Get Started →</a>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+  </div>
+</nav>
+
+<!-- ════ HERO ════ -->
+<section class="hero">
+  <div class="ambient-glow g1"></div>
+  <div class="ambient-glow g2"></div>
+  <div class="hi">
+    <div>
+      <div class="hbadge"><div class="hbdot"></div>Crypto &amp; fiat payments made easy</div>
+      <h1 class="hero-h1">Crypto &amp; Fiat<br/>Payments<br/><span class="dim">Made Easy.</span></h1>
+      <p class="hsub">Deposit any crypto and get naira instantly. Buy any token with just a wallet address. Save in stablecoins. Withdraw to any bank. One platform — zero friction.</p>
+      <div class="ha">
+        <a href="https://usezwap.com/user_register" class="bh2">Get Started Free →</a>
+        <a href="#how" class="bho2">See How It Works</a>
+      </div>
+      <div class="hstats">
+        <div><div class="snum" data-target="18" data-suffix="+">0</div><div class="slbl">Supported tokens</div></div>
+        <div><div class="snum" data-target="60" data-prefix="<" data-suffix="s">0</div><div class="slbl">Conversion time</div></div>
+        <div><div class="snum" data-target="0.85" data-suffix="%" data-decimal="2">0</div><div class="slbl">Off-ramp fee</div></div>
+        <div><div class="snum" data-target="200" data-suffix="+">0</div><div class="slbl">Countries via Visa</div></div>
+      </div>
+    </div>
+
+    <!-- PHONE MOCKUP -->
+    <div class="hero-mockup">
+      <div class="flt-card fc-tl">
+        <div class="flt-lbl">Just received</div>
+        <div class="flt-val">+₦148,725</div>
+        <div class="flt-ok">✓ USDT auto-converted</div>
+      </div>
+
+      <div class="phone-outer" style="transform:none !important;">
+        <div class="tilt-glare"><div class="tilt-glare-inner"></div></div>
+        <div class="phone-screen" style="padding:0; display:flex; align-items:center; justify-content:center; background:none;">
+          <img src="Dashboard.png" alt="ZWAP Dashboard" style="width:100%; height:100%; object-fit:cover; border-radius:32px;">
+        </div>
+      </div>
+
+      <div class="flt-card fc-br">
+        <div class="flt-lbl">ZID Privacy</div>
+        <div class="flt-val">ZID-4X9RK2</div>
+        <div class="flt-ok">Identity shielded ✓</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="div"></div>
+
+<!-- ════ HOW IT WORKS ════ -->
+<section class="how" id="how">
+  <div class="con">
+    <div class="ew rv">Simple by design</div>
+    <h2 class="sh rv">Deposit. Buy. Withdraw.</h2>
+    <p class="ss rv">Whether you're converting crypto to naira or buying tokens with a wallet address — ZWAP makes both feel as simple as a bank transfer.</p>
+    <div class="sg rv">
+      <div class="sc">
+        <div class="snu">01</div><div class="sic">📥</div>
+        <div class="sti">Deposit &amp; Auto-Convert</div>
+        <p class="sde">Send any supported crypto to your ZWAP address. The moment it lands, ZWAP converts it to naira automatically — no button, no waiting. Under 60 seconds.</p>
+        <img src="Deposit button click.png" alt="Deposit screen" class="sc-img" loading="lazy">
+      </div>
+      <div class="sc">
+        <div class="snu">02</div><div class="sic">🛒</div>
+        <div class="sti">Buy Crypto by Wallet Address</div>
+        <p class="sde">Enter any destination wallet address, pick the network, pay from your naira balance. Crypto lands in that wallet. No seed phrases. No connect-wallet. Just like a bank transfer.</p>
+        <img src="_Buy crypto_ clicked.png" alt="Buy Crypto screen" class="sc-img" loading="lazy">
+      </div>
+      <div class="sc">
+        <div class="snu">03</div><div class="sic">🏦</div>
+        <div class="sti">Withdraw or Spend</div>
+        <p class="sde">Withdraw naira to any bank account in seconds, or spend globally with your ZWAP Visa card in 200+ countries. Zero manual conversion at checkout.</p>
+        <img src="To bank clicked.png" alt="Withdraw screen" class="sc-img" loading="lazy">
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="div"></div>
+
+<!-- ════ 5 PILLARS ════ -->
+<section class="pils" id="features">
+  <div class="con">
+    <div class="ew rv">Five core pillars</div>
+    <h2 class="sh rv">Everything built<br/>around your money.</h2>
+    <p class="ss rv">Five products that work independently and together. Each one solves a problem the existing market hasn't fixed.</p>
+    <div class="pg rv">
+      <div class="pc">
+        <div class="pn">01</div><div class="pic">🔄</div>
+        <div class="pt">Instant Crypto Off-Ramp</div>
+        <p class="pd">Send crypto — naira appears. Automatically. No "Convert" button. No waiting. Naira credited within 30–90 seconds of blockchain confirmation.</p>
+      </div>
+      <div class="pc">
+        <div class="pn">02</div><div class="pic">🛒</div>
+        <div class="pt">Buy Any Crypto — New Way</div>
+        <p class="pd">Enter a wallet address, pick the network, pay from your naira balance. Crypto lands there. No custodial wallet. No connect-wallet flow. Works like a bank transfer.</p>
+      </div>
+      <div class="pc">
+        <div class="pn">03</div><div class="pic">🛡️</div>
+        <div class="pt">Naira Balance &amp; ZID Privacy</div>
+        <p class="pd">Every account includes a virtual bank account. Transactions show your ZID alias — not your legal name. Fully KYC-compliant. Identity shielded from third parties.</p>
+      </div>
+      <div class="pc">
+        <div class="pn">04</div><div class="pic">💰</div>
+        <div class="pt">Stablecoin Savings Vault</div>
+        <p class="pd">Save in USDT or USDC — not naira. Hold dollar value while naira inflates. Flexible vaults or fixed-term with yield. Balance shown in both USD and NGN live.</p>
+      </div>
+      <div class="pc">
+        <div class="pn">05</div><div class="pic">💳</div>
+        <div class="pt">ZWAP Visa Debit Card</div>
+        <p class="pd">Physical and virtual Visa cards. Funded from your ZWAP balance. Spend everywhere Visa is accepted globally. No manual top-up. Real-time notifications.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="div"></div>
+
+<!-- ════ APP SCREENSHOT SHOWCASE ════ -->
+<section class="views-sec" id="views">
+  <div class="con">
+    <div class="views-intro rv">
+      <div class="ew" style="text-align:center">Product Views</div>
+      <h2 class="sh" style="text-align:center">Designed for the way<br/>you actually use money.</h2>
+      <p class="ss rv" style="text-align:center;margin-inline:auto">Clean, fast, and intuitive — whether you're on your phone or your laptop. ZWAP works beautifully on every screen.</p>
+    </div>
+
+    <!-- 3 PHONE VIEWS SIDE BY SIDE -->
+    <div class="phone-views-row rv">
+
+      <!-- Phone 1: Home Dashboard -->
+      <div class="pv-wrap">
+        <div class="ps2">
+          <img src="App Mainpage.png" alt="Home Dashboard" style="width:100%; height:100%; object-fit:cover; border-radius:18px;">
+        </div>
+        <div class="pv-label">Home Dashboard</div>
+      </div>
+
+      <!-- Phone 2: Buy Crypto Screen -->
+      <div class="pv-wrap">
+        <div class="ps2">
+          <img src="_Buy crypto_ clicked.png" alt="Buy Crypto Screen" style="width:100%; height:100%; object-fit:cover; border-radius:18px;">
+        </div>
+        <div class="pv-label">Buy Crypto</div>
+      </div>
+
+      <!-- Phone 3: Savings Vault -->
+      <div class="pv-wrap">
+        <div class="ps2">
+          <img src="Wealth Vault.png" alt="Savings Vault" style="width:100%; height:100%; object-fit:cover; border-radius:18px;">
+        </div>
+        <div class="pv-label">Savings Vault</div>
+      </div>
+
+    </div><!-- end phone views row -->
+
+    <!-- DESKTOP VIEW (Hidden on mobile) -->
+    <div class="rv desktop-view-wrap">
+      <div class="dv-label">Desktop Dashboard</div>
+      <div class="desktop-frame" style="position:relative">
+        <div class="tilt-glare"><div class="tilt-glare-inner"></div></div>
+        <div class="desktop-bar">
+          <div class="desk-dot" style="background:#4a4a4a"></div>
+          <div class="desk-dot" style="background:#3a3a3a"></div>
+          <div class="desk-dot" style="background:#2a2a2a"></div>
+          <div class="desk-url">app.usezwap.com/dashboard</div>
+          <div style="font-size:11px;color:#444">⟳</div>
+        </div>
+        <div class="desk-body">
+          <!-- App header — WHITE with black ZWAP -->
+          <div class="db-header">
+            <div style="font-family:var(--fh);font-size:17px;font-weight:800;color:#000">ZWAP</div>
+            <div class="db-nav">
+              <div class="db-nav-item active">Dashboard</div>
+              <div class="db-nav-item">Buy Crypto</div>
+              <div class="db-nav-item">Savings</div>
+              <div class="db-nav-item">Cards</div>
+              <div class="db-nav-item">Transactions</div>
+            </div>
+            <div class="db-user">
+              <div class="db-av">D</div>
+              <div><div class="db-uname">Afiakurue David</div><div style="font-size:9px;color:#888">ZID-4X9RK2</div></div>
+            </div>
+          </div>
+          <div class="db-content">
+            <div class="db-sidebar">
+              <div style="font-size:10px;color:#aaa;letter-spacing:1px;text-transform:uppercase;margin-bottom:12px">Menu</div>
+              <div class="db-menu-item active"><span class="db-menu-icon">⊞</span>Overview</div>
+              <div class="db-menu-item"><span class="db-menu-icon">₿</span>Buy Crypto</div>
+              <div class="db-menu-item"><span class="db-menu-icon">↓</span>Deposit</div>
+              <div class="db-menu-item"><span class="db-menu-icon">↑</span>Withdraw</div>
+              <div class="db-menu-item"><span class="db-menu-icon">🛡</span>Savings</div>
+              <div class="db-menu-item"><span class="db-menu-icon">💳</span>Cards</div>
+              <div style="border-top:1px solid #eee;margin:12px 0"></div>
+              <div class="db-menu-item"><span class="db-menu-icon">⚙</span>Settings</div>
+              <div class="db-menu-item"><span class="db-menu-icon">?</span>Support</div>
+            </div>
+            <div class="db-main">
+              <!-- FIXED: Balance cards — ₦138,300.40 clearly displayed -->
+              <div class="db-cards-row">
+                <div class="db-card dark">
+                  <div class="dbc-label">Total Balance</div>
+                  <div class="dbc-val">₦138,300</div>
+                  <div class="dbc-sub">≈ $87.40 USD · Live rate</div>
+                </div>
+                <div class="db-card">
+                  <div class="dbc-label">Naira Balance</div>
+                  <div class="dbc-val">₦138,300</div>
+                  <div class="dbc-sub">Available to withdraw</div>
+                </div>
+                <div class="db-card">
+                  <div class="dbc-label">Savings Vault</div>
+                  <div class="dbc-val">$2,340.55</div>
+                  <div class="dbc-sub">5.0% p.a. · 90-Day Fixed</div>
+                </div>
+              </div>
+              <div class="db-txn-section">
+                <div class="db-txn-head">
+                  <div class="db-txn-title">Recent Transactions</div>
+                  <div class="db-txn-see">View all →</div>
+                </div>
+                <div class="db-txn-row">
+                  <div class="db-txn-av" style="background:#888">D</div>
+                  <div style="flex:1"><div class="db-txn-nm">From David Z.</div><div class="db-txn-meta">Deposit · USDT</div></div>
+                  <div style="font-size:10px;color:#aaa;margin-right:14px">10:46 AM</div>
+                  <div class="db-txn-amt db-green">+$62.30</div>
+                </div>
+                <div class="db-txn-row">
+                  <div class="db-txn-av" style="background:#1a6ef5">D</div>
+                  <div style="flex:1"><div class="db-txn-nm">To Daniel Xue</div><div class="db-txn-meta">Transfer · Naira</div></div>
+                  <div style="font-size:10px;color:#aaa;margin-right:14px">10:46 AM</div>
+                  <div class="db-txn-amt db-red">-$14.35</div>
+                </div>
+                <div class="db-txn-row">
+                  <div class="db-txn-av" style="background:#7c3aed">P</div>
+                  <div style="flex:1"><div class="db-txn-nm">From Pristian</div><div class="db-txn-meta">Deposit · USDC</div></div>
+                  <div style="font-size:10px;color:#aaa;margin-right:14px">10:46 AM</div>
+                  <div class="db-txn-amt db-green">+$8.12</div>
+                </div>
+                <div class="db-txn-row">
+                  <div class="db-txn-av" style="background:#f97316">A</div>
+                  <div style="flex:1"><div class="db-txn-nm">Buy BTC</div><div class="db-txn-meta">Crypto · 0x7a3f...D91C</div></div>
+                  <div style="font-size:10px;color:#aaa;margin-right:14px">9:14 AM</div>
+                  <div class="db-txn-amt db-red">-₦200,000</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<div class="div"></div>
+
+<!-- ════ UVP SECTION ════ -->
+<section class="uvps" style="position:relative">
+  <div class="ambient-glow g3"></div>
+  <div class="con">
+    <div class="ui">
+      <div class="rv">
+        <div class="ew">Why ZWAP</div>
+        <h2 class="sh">Built different.<br/>On purpose.</h2>
+        <p class="ss">Every other platform makes you do the work. ZWAP does it for you.</p>
+        <ul class="ul">
+          <li><div class="un">01</div><div><div class="ut">No manual conversion — ever</div><div class="ud">Send crypto, naira appears. No "Convert" button. No waiting screens. Converts automatically the moment it lands on-chain.</div></div></li>
+          <li><div class="un">02</div><div><div class="ut">A completely new way to buy crypto</div><div class="ud">No wallet creation. No seed phrases. No connect-wallet. Enter any wallet address, pick the network, pay from your balance. Done.</div></div></li>
+          <li><div class="un">03</div><div><div class="ut">Your name stays private</div><div class="ud">Transactions show your ZID alias — not your legal name. Fully KYC-compliant. Shielded from counterparties.</div></div></li>
+          <li><div class="un">04</div><div><div class="ut">Save in dollars. Withdraw in naira.</div><div class="ud">Your vault holds USDT — not naira. You preserve dollar value the entire time. No inflation erosion. Withdraw when you need it at the live rate.</div></div></li>
+        </ul>
+      </div>
+      <div class="rv">
+        <div class="term">
+          <div class="tb">
+            <div class="td" style="background:#3a3a3a"></div>
+            <div class="td" style="background:#2a2a2a"></div>
+            <div class="td" style="background:#1a1a1a"></div>
+            <span class="tt2">ZWAP — Transaction Log</span>
+          </div>
+          <div class="tbody">
+            <div><span class="tk">STATUS    </span><span class="tok">● CONFIRMED</span></div>
+            <div><span class="tk">ASSET     </span><span class="tv">200.00 USDT (TRC-20)</span></div>
+            <div><span class="tk">FROM      </span><span class="tv">0x7A3F...D91C</span></div>
+            <div><span class="tk">RATE      </span><span class="tv">₦1,500.00 / USDT</span></div>
+            <div class="tdm">──────────────────────────────</div>
+            <div><span class="tk">GROSS     </span><span class="tv">₦300,000.00</span></div>
+            <div><span class="tk">FEE       </span><span class="tv">₦2,550.00 (0.85%)</span></div>
+            <div><span class="tk">NET       </span><span class="tok">₦297,450.00</span></div>
+            <div class="tdm">──────────────────────────────</div>
+            <div><span class="tk">CREDITED  </span><span class="tv">Naira Balance</span></div>
+            <div><span class="tk">ZID       </span><span class="tv">ZID-4X9RK2</span></div>
+            <div><span class="tk">TIME      </span><span class="tok">38 seconds</span></div>
+            <div class="tdm">──────────────────────────────</div>
+            <div><span class="tok">✓ Auto-converted. Balance updated.</span><span class="blink"> _</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="div"></div>
+
+<!-- ════ CARD SECTION ════ -->
+<section class="cds" id="card">
+  <div class="con">
+    <div class="ci">
+      <div class="rv">
+        <div class="ew">ZWAP Visa Card</div>
+        <h2 class="sh">Spend anywhere<br/>Visa is accepted.</h2>
+        <div class="everywhere-line"><span class="bounce-text" id="bounceText">Almost EVERYWHERE.</span></div>
+        <p class="ss">Physical and virtual cards funded directly from your ZWAP balance. 200+ countries. No manual conversion at checkout.</p>
+        <ul class="cfl">
+          <li><div class="cfd"></div>Physical and virtual card options</li>
+          <li><div class="cfd"></div>Funded from Naira Balance or Stablecoin Vault</li>
+          <li><div class="cfd"></div>Accepted at 40M+ merchants worldwide</li>
+          <li><div class="cfd"></div>Auto-converted at point of sale</li>
+          <li><div class="cfd"></div>Real-time spend notifications</li>
+          <li><div class="cfd"></div>ATM cash withdrawals globally</li>
+        </ul>
+        <div style="margin-top:32px">
+          <a href="https://usezwap.com/user_register" style="text-decoration:none;color:#fff;font-size:18px;font-family:var(--fh);font-weight:700">Get Your Card →</a>
+        </div>
+      </div>
+      <div class="cv rv">
+        <div class="vw vb">
+          <div style="font-size:16px;color:#333">💳</div>
+          <div class="vn" style="letter-spacing:4px">**** **** **** ****</div>
+          <div class="vrow">
+            <div><div class="vfl">CARDHOLDER</div><div class="vfv">*** ***</div></div>
+            <div class="vvisa" style="color:#333">VISA</div>
+          </div>
+        </div>
+        <div class="vw vm">
+          <div style="font-size:22px">💳</div>
+          <div class="vn">**** &nbsp;**** &nbsp;**** &nbsp;****</div>
+          <div class="vrow">
+            <div><div class="vfl">Card Holder</div><div class="vfv">*** ***</div></div>
+            <div style="text-align:right"><div class="vfl">Expires</div><div class="vfv">**/**</div></div>
+          </div>
+          <div style="display:flex;justify-content:flex-end;margin-top:-6px"><div class="vvisa">VISA</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- ════ FAQ ════ -->
+<section class="fqs" id="faq">
+  <div class="con">
+    <div style="text-align:center"><div class="ew rv" style="text-align:center">FAQ</div><h2 class="sh rv" style="text-align:center">Common questions</h2></div>
+    <div class="fw">
+      <div class="fi2"><button class="fb2" onclick="tf(this)">What is ZWAP?<span class="fa2">+</span></button><div class="fba">ZWAP is a crypto &amp; fiat payments platform that automatically converts incoming cryptocurrency to local naira the moment it arrives. You can also buy crypto by wallet address, save in stablecoins, and withdraw to any bank account.</div></div>
+      <div class="fi2"><button class="fb2" onclick="tf(this)">How does the automatic conversion work?<span class="fa2">+</span></button><div class="fba">Send any supported crypto to your ZWAP deposit address. We detect it on-chain, convert to naira at the live rate, deduct 0.85%, and credit your balance — within 30–90 seconds. No action from you.</div></div>
+      <div class="fi2"><button class="fb2" onclick="tf(this)">How do I buy crypto on ZWAP?<span class="fa2">+</span></button><div class="fba">Navigate to Buy Crypto. Select a token, enter the amount, type in any destination wallet address, choose the network, and confirm. ZWAP deducts from your naira balance and sends crypto directly to that wallet. No wallet creation inside ZWAP. No seed phrases needed.</div></div>
+      <div class="fi2"><button class="fb2" onclick="tf(this)">What tokens does ZWAP support?<span class="fa2">+</span></button><div class="fba">18+ tokens including USDT, USDC, BTC, ETH, BNB, SOL, MATIC, ARB, TRX, XRP, DOGE, TON, AVAX, BUSD, DAI, OP, LTC and more — across TRC-20, ERC-20, BEP-20, Base, Solana, Polygon and more networks.</div></div>
+      <div class="fi2"><button class="fb2" onclick="tf(this)">What are the fees?<span class="fa2">+</span></button><div class="fba">Crypto deposits: 0.85% off-ramp fee. Buying crypto: 0.50% platform fee + exact network fee at cost. Naira withdrawals: ₦10 (up to ₦200K) · ₦50 (₦200K–₦1M) · ₦100 (above ₦1M). Naira deposits always free. Minimum withdrawal: ₦100.</div></div>
+      <div class="fi2"><button class="fb2" onclick="tf(this)">What is ZID?<span class="fa2">+</span></button><div class="fba">ZID is your ZWAP Identification Tag — an alias replacing your legal name on transaction records. Counterparties see "ZID-XXXXXX" not your name. All users are fully KYC-verified.</div></div>
+      <div class="fi2"><button class="fb2" onclick="tf(this)">Is ZWAP secure?<span class="fa2">+</span></button><div class="fba">Yes. Full KYC (BVN, NIN, government ID). Funds held with licensed banking partners. Real-time fraud monitoring. ZWAP never stores your private keys — your external wallet is always yours.</div></div>
+      <div class="fi2"><button class="fb2" onclick="tf(this)">Which countries does ZWAP support?<span class="fa2">+</span></button><div class="fba">Live in Nigeria at launch. Ghana, Kenya, and South Africa next. Then Latin America, Southeast Asia, and the Middle East — all regions where crypto-to-fiat infrastructure is severely underserved.</div></div>
+    </div>
+  </div>
+</section>
+
+<div class="div"></div>
+
+<!-- ════ CTA ════ -->
+<section class="ctas-sec">
+  <div class="con">
+    <div class="ew rv" style="color:var(--gm);text-align:center">Get started</div>
+    <h2 class="ctat rv">Crypto &amp; fiat<br/>payments made easy.</h2>
+    <p class="ctas-sub rv">Deposit. Buy. Save. Withdraw. Everything in one place — built for you.</p>
+    <div class="ctab rv">
+      <a href="https://usezwap.com/user_register" class="bcm">Create Free Account →</a>
+      <a href="https://usezwap.com/login_auth" class="bco">Log In</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="fg2">
+    <div>
+      <div class="flo">ZWAP</div>
+      <p class="fde">Crypto &amp; fiat payments made easy. Deposit, convert, buy, save, and spend — all in one place. Built for Africa. Built for the world.</p>
+    </div>
+    <div class="fcol"><h4>Product</h4><ul><li><a href="#how">How It Works</a></li><li><a href="#features">Features</a></li><li><a href="#views">App Views</a></li><li><a href="#card">ZWAP Card</a></li><li><a href="#">Savings Vault</a></li></ul></div>
+    <div class="fcol"><h4>Company</h4><ul><li><a href="#">About</a></li><li><a href="#">Blog</a></li><li><a href="#">Careers</a></li><li><a href="#">Press Kit</a></li></ul></div>
+    <div class="fcol"><h4>Legal &amp; Support</h4><ul><li><a href="#">Terms of Use</a></li><li><a href="#">Privacy Policy</a></li><li><a href="#">AML Policy</a></li><li><a href="mailto:hello@usezwap.com">hello@usezwap.com</a></li></ul></div>
+  </div>
+  <div class="fbot">
+    <div class="fcp">© 2025 usezwap Ltd. All rights reserved.</div>
+    <div class="fso"><a class="sb" href="#">𝕏</a><a class="sb" href="#">in</a><a class="sb" href="#">ig</a></div>
+  </div>
+</footer>
+
+<script>
+  /* ── FAQ toggle & mobile menu ── */
+  function tf(btn) {
+    const item = btn.parentElement;
+    item.classList.toggle('open');
+  }
+  function toggleMenu() {
+    document.getElementById('mobileMenu').classList.toggle('open');
+  }
+
+  document.addEventListener('DOMContentLoaded', function () {
+
+    /* ═══════════════════════════════════════════
+       1. STAGGERED SCROLL REVEAL (Intersection Observer)
+       ═══════════════════════════════════════════ */
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        const el = entry.target;
+        const staggerSelectors = { '.sg': '.sc', '.pg': '.pc' };
+        let staggered = false;
+        for (const [parent, child] of Object.entries(staggerSelectors)) {
+          if (el.matches(parent)) {
+            el.querySelectorAll(child).forEach((c, i) => {
+              c.style.opacity = '0';
+              c.style.transform = 'translateY(30px) scale(0.95)';
+              c.style.transition = 'opacity .7s cubic-bezier(.25,.46,.45,.94), transform .7s cubic-bezier(.25,.46,.45,.94)';
+              setTimeout(() => {
+                c.style.opacity = '1';
+                c.style.transform = 'translateY(0) scale(1)';
+              }, i * 150);
+            });
+            staggered = true;
+            break;
+          }
+        }
+        if (!staggered) {
+          el.classList.add('in');
+        } else {
+          el.style.opacity = '1';
+          el.style.transform = 'none';
+        }
+        revealObserver.unobserve(el);
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.rv').forEach(el => revealObserver.observe(el));
+
+
+    /* ═══════════════════════════════════════════
+       2. 3D SCROLL-TRIGGERED PHONE ANIMATION (REMOVED)
+       ═══════════════════════════════════════════ */
+    // The scroll-triggered rotation on .hero-mockup .phone-outer 
+    // was removed at user request to keep the image static.
+
+
+    /* ═══════════════════════════════════════════
+       3. 3D TILT + GLARE ON MOCKUPS
+       ═══════════════════════════════════════════ */
+    function initTilt(el, maxTilt) {
+      const glare = el.querySelector('.tilt-glare-inner');
+      el.addEventListener('mousemove', e => {
+        const rect = el.getBoundingClientRect();
+        const x = (e.clientX - rect.left) / rect.width;
+        const y = (e.clientY - rect.top) / rect.height;
+        const tiltX = (0.5 - y) * maxTilt;
+        const tiltY = (x - 0.5) * maxTilt;
+        el.style.transform = `perspective(800px) rotateX(${tiltX}deg) rotateY(${tiltY}deg) scale3d(1.02,1.02,1.02)`;
+        if (glare) {
+          glare.style.transform = `translate(${(x - 0.5) * 100}%, ${(y - 0.5) * 100}%)`;
+          glare.style.opacity = '1';
+        }
+      });
+      el.addEventListener('mouseleave', () => {
+        el.style.transform = 'perspective(800px) rotateX(0) rotateY(0) scale3d(1,1,1)';
+        if (glare) glare.style.opacity = '0';
+      });
+    }
+    // Only apply tilt to non-hero phone mockups (hero phone uses scroll animation)
+    document.querySelectorAll('.desktop-frame').forEach(el => initTilt(el, 8));
+
+
+    /* ═══════════════════════════════════════════
+       4. DYNAMIC NUMBER COUNTERS
+       ═══════════════════════════════════════════ */
+    function easeOutQuart(t) { return 1 - Math.pow(1 - t, 4); }
+
+    function animateCounter(el) {
+      const target = parseFloat(el.dataset.target);
+      const decimals = parseInt(el.dataset.decimal) || 0;
+      const prefix = el.dataset.prefix || '';
+      const suffix = el.dataset.suffix || '';
+      const duration = 2000;
+      let start = null;
+      function step(ts) {
+        if (!start) start = ts;
+        const progress = Math.min((ts - start) / duration, 1);
+        const eased = easeOutQuart(progress);
+        const current = target * eased;
+        el.textContent = prefix + current.toFixed(decimals) + suffix;
+        if (progress < 1) requestAnimationFrame(step);
+      }
+      requestAnimationFrame(step);
+    }
+
+    const counterObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          animateCounter(entry.target);
+          counterObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.3 });
+
+    document.querySelectorAll('.snum[data-target]').forEach(el => counterObserver.observe(el));
+
+
+    /* ═══════════════════════════════════════════
+       5. MAGNETIC & INTERACTIVE BUTTONS
+       ═══════════════════════════════════════════ */
+    document.querySelectorAll('.bh2, .bp2, .bcm').forEach(btn => {
+      btn.addEventListener('mousemove', e => {
+        const rect = btn.getBoundingClientRect();
+        const x = e.clientX - rect.left - rect.width / 2;
+        const y = e.clientY - rect.top - rect.height / 2;
+        btn.style.transform = `translate(${x * 0.25}px, ${y * 0.25}px)`;
+      });
+      btn.addEventListener('mouseleave', () => {
+        btn.style.transform = 'translate(0, 0)';
+      });
+      btn.addEventListener('click', function (e) {
+        const ripple = document.createElement('span');
+        ripple.classList.add('btn-ripple');
+        const rect = btn.getBoundingClientRect();
+        const size = Math.max(rect.width, rect.height);
+        ripple.style.width = ripple.style.height = size + 'px';
+        ripple.style.left = (e.clientX - rect.left - size / 2) + 'px';
+        ripple.style.top = (e.clientY - rect.top - size / 2) + 'px';
+        btn.appendChild(ripple);
+        ripple.addEventListener('animationend', () => ripple.remove());
+      });
+    });
+
+
+    /* ═══════════════════════════════════════════
+       6. PARALLAX FLOATING CARDS
+       ═══════════════════════════════════════════ */
+    const fltCards = document.querySelectorAll('.flt-card');
+    const heroSection = document.querySelector('.hero');
+    if (fltCards.length && heroSection) {
+      let fltTicking = false;
+      window.addEventListener('scroll', () => {
+        if (!fltTicking) {
+          requestAnimationFrame(() => {
+            const heroRect = heroSection.getBoundingClientRect();
+            const scrollProgress = -heroRect.top / (heroRect.height || 1);
+            fltCards.forEach((card, i) => {
+              const speed = i === 0 ? 0.35 : -0.25;
+              const yOffset = scrollProgress * speed * 120;
+              card.style.transform = `translateY(${yOffset}px)`;
+            });
+            fltTicking = false;
+          });
+          fltTicking = true;
+        }
+      });
+    }
+
+
+    /* ═══════════════════════════════════════════
+       7. FLOATING DECORATIVE PARTICLES
+       ═══════════════════════════════════════════ */
+    const particleChars = ['₿', 'Ξ', '₮', '₦', '◆', '★', '●', '$', '◇', '⬡'];
+    for (let i = 0; i < 15; i++) {
+      const p = document.createElement('div');
+      p.classList.add('float-particle');
+      p.textContent = particleChars[i % particleChars.length];
+      p.style.left = Math.random() * 100 + 'vw';
+      p.style.top = Math.random() * 100 + 'vh';
+      p.style.fontSize = (14 + Math.random() * 18) + 'px';
+      p.style.animationDuration = (8 + Math.random() * 12) + 's';
+      p.style.animationDelay = (Math.random() * 5) + 's';
+      document.body.appendChild(p);
+    }
+
+
+    /* ═══════════════════════════════════════════
+       8. STAGGERED TEXT ENTRANCE ANIMATIONS
+       ═══════════════════════════════════════════ */
+    const textObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        // Find all stagger-text children in same parent section
+        const section = entry.target.closest('section, .con');
+        if (section && !section.dataset.staggered) {
+          section.dataset.staggered = '1';
+          const texts = section.querySelectorAll('.txt-stagger');
+          texts.forEach((t, i) => {
+            setTimeout(() => t.classList.add('in'), i * 100);
+          });
+        } else {
+          entry.target.classList.add('in');
+        }
+        textObserver.unobserve(entry.target);
+      });
+    }, { threshold: 0.15 });
+
+    // Mark text elements for staggered entrance
+    document.querySelectorAll('.ew, .sh, .ss').forEach(el => {
+      if (!el.classList.contains('rv')) {
+        el.classList.add('txt-stagger');
+        textObserver.observe(el);
+      }
+    });
+
+
+    /* ═══════════════════════════════════════════
+       9. BOUNCE "Almost EVERYWHERE" TEXT
+       ═══════════════════════════════════════════ */
+    const bounceText = document.getElementById('bounceText');
+    if (bounceText) {
+      const bounceObs = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            bounceText.classList.add('animate');
+            bounceObs.unobserve(bounceText);
+          }
+        });
+      }, { threshold: 0.5 });
+      bounceObs.observe(bounceText);
+    }
+
+  }); // end DOMContentLoaded
+</script>
+
+</body>
+</html>
