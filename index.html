@@ -27,7 +27,7 @@ nav{
   display:flex;align-items:center;justify-content:space-between;
   padding:20px 64px;
   background:rgba(10,10,10,0.85);
-  backdrop-filter:blur(24px);
+  -webkit-backdrop-filter:blur(24px); backdrop-filter:blur(24px);
   border-bottom:1px solid rgba(255,255,255,0.06);
 }
 .logo{
@@ -193,7 +193,7 @@ h1.hero-h1 .dim{color:var(--gm)}
 
 .flt-card{
   position:absolute;background:#1a1a1a;border:1px solid #2a2a2a;
-  border-radius:12px;padding:12px 16px;font-size:12px;backdrop-filter:blur(10px);
+  border-radius:12px;padding:12px 16px;font-size:12px;-webkit-backdrop-filter:blur(10px); backdrop-filter:blur(10px);
 }
 .flt-card.fc-tl{top:50px;left:-110px;animation:fla 4s ease-in-out infinite}
 .flt-card.fc-br{bottom:90px;right:-100px;animation:flb 4s ease-in-out infinite 1.2s}
@@ -519,6 +519,42 @@ footer{background:var(--k2);border-top:1px solid var(--bd);padding:64px 64px 36p
   .hstats{gap:18px}
   .snum{font-size:22px}
 }
+
+/* Extracted Inline Styles */
+.es-1 { margin-top:32px;display:flex;gap:14px; }
+.es-2 { display:block;padding:12px 26px;border:1.5px solid #fff;border-radius:8px;font-size:15px; }
+.es-3 { display:block;padding:12px 26px;background:#fff;color:#000;border-radius:8px;font-size:15px;font-weight:700; }
+.es-4 { transform:none !important; }
+.es-5 { padding:0; display:flex; align-items:center; justify-content:center; background:none; }
+.es-6 { width:100%; height:100%; object-fit:cover; border-radius:32px; }
+.es-7 { text-align:center; }
+.es-8 { text-align:center;margin-inline:auto; }
+.es-9 { width:100%; height:100%; object-fit:cover; border-radius:18px; }
+.es-10 { position:relative; }
+.es-11 { background:#4a4a4a; }
+.es-12 { background:#3a3a3a; }
+.es-13 { background:#2a2a2a; }
+.es-14 { font-size:11px;color:#444; }
+.es-15 { font-family:var(--fh);font-size:17px;font-weight:800;color:#000; }
+.es-16 { font-size:9px;color:#888; }
+.es-17 { font-size:10px;color:#aaa;letter-spacing:1px;text-transform:uppercase;margin-bottom:12px; }
+.es-18 { border-top:1px solid #eee;margin:12px 0; }
+.es-19 { background:#888; }
+.es-20 { flex:1; }
+.es-21 { font-size:10px;color:#aaa;margin-right:14px; }
+.es-22 { background:#1a6ef5; }
+.es-23 { background:#7c3aed; }
+.es-24 { background:#f97316; }
+.es-25 { background:#1a1a1a; }
+.es-26 { margin-top:32px; }
+.es-27 { text-decoration:none;color:#fff;font-size:18px;font-family:var(--fh);font-weight:700; }
+.es-28 { font-size:16px;color:#333; }
+.es-29 { letter-spacing:4px; }
+.es-30 { color:#333; }
+.es-31 { font-size:22px; }
+.es-32 { text-align:right; }
+.es-33 { display:flex;justify-content:flex-end;margin-top:-6px; }
+.es-34 { color:var(--gm);text-align:center; }
 </style>
 </head>
 <body>
@@ -531,16 +567,16 @@ footer{background:var(--k2);border-top:1px solid var(--bd);padding:64px 64px 36p
   <a href="#views" onclick="toggleMenu()">App Views</a>
   <a href="#card" onclick="toggleMenu()">Card</a>
   <a href="#faq" onclick="toggleMenu()">FAQ</a>
-  <div style="margin-top:32px;display:flex;gap:14px">
-    <a href="https://usezwap.com/login_auth" style="display:block;padding:12px 26px;border:1.5px solid #fff;border-radius:8px;font-size:15px">Log In</a>
-    <a href="https://usezwap.com/user_register" style="display:block;padding:12px 26px;background:#fff;color:#000;border-radius:8px;font-size:15px;font-weight:700">Get Started</a>
+  <div  class="es-1">
+    <a href="https://usezwap.com/login_auth"  class="es-2">Log In</a>
+    <a href="https://usezwap.com/user_register"  class="es-3">Get Started</a>
   </div>
 </div>
 
 <!-- NAV — SEAMLESS DARK HEADER -->
 <nav>
   <div class="logo">
-    <img src="favicon.ico" alt="ZWAP Logo">
+    <img src="ZWap logo.png" alt="ZWAP Logo">
     <span>ZWAP</span>
   </div>
   <ul class="nl">
@@ -586,10 +622,10 @@ footer{background:var(--k2);border-top:1px solid var(--bd);padding:64px 64px 36p
         <div class="flt-ok">✓ USDT auto-converted</div>
       </div>
 
-      <div class="phone-outer" style="transform:none !important;">
+      <div class="phone-outer es-4" >
         <div class="tilt-glare"><div class="tilt-glare-inner"></div></div>
-        <div class="phone-screen" style="padding:0; display:flex; align-items:center; justify-content:center; background:none;">
-          <img src="Dashboard.png" alt="ZWAP Dashboard" style="width:100%; height:100%; object-fit:cover; border-radius:32px;">
+        <div class="phone-screen es-5" >
+          <img src="Dashboard.png" alt="ZWAP Dashboard"  class="es-6">
         </div>
       </div>
 
@@ -677,9 +713,9 @@ footer{background:var(--k2);border-top:1px solid var(--bd);padding:64px 64px 36p
 <section class="views-sec" id="views">
   <div class="con">
     <div class="views-intro rv">
-      <div class="ew" style="text-align:center">Product Views</div>
-      <h2 class="sh" style="text-align:center">Designed for the way<br/>you actually use money.</h2>
-      <p class="ss rv" style="text-align:center;margin-inline:auto">Clean, fast, and intuitive — whether you're on your phone or your laptop. ZWAP works beautifully on every screen.</p>
+      <div class="ew es-7" >Product Views</div>
+      <h2 class="sh es-7" >Designed for the way<br/>you actually use money.</h2>
+      <p class="ss rv es-8" >Clean, fast, and intuitive — whether you're on your phone or your laptop. ZWAP works beautifully on every screen.</p>
     </div>
 
     <!-- 3 PHONE VIEWS SIDE BY SIDE -->
@@ -688,7 +724,7 @@ footer{background:var(--k2);border-top:1px solid var(--bd);padding:64px 64px 36p
       <!-- Phone 1: Home Dashboard -->
       <div class="pv-wrap">
         <div class="ps2">
-          <img src="App Mainpage.png" alt="Home Dashboard" style="width:100%; height:100%; object-fit:cover; border-radius:18px;">
+          <img src="App Mainpage.png" alt="Home Dashboard"  class="es-9">
         </div>
         <div class="pv-label">Home Dashboard</div>
       </div>
@@ -696,7 +732,7 @@ footer{background:var(--k2);border-top:1px solid var(--bd);padding:64px 64px 36p
       <!-- Phone 2: Buy Crypto Screen -->
       <div class="pv-wrap">
         <div class="ps2">
-          <img src="_Buy crypto_ clicked.png" alt="Buy Crypto Screen" style="width:100%; height:100%; object-fit:cover; border-radius:18px;">
+          <img src="_Buy crypto_ clicked.png" alt="Buy Crypto Screen"  class="es-9">
         </div>
         <div class="pv-label">Buy Crypto</div>
       </div>
@@ -704,7 +740,7 @@ footer{background:var(--k2);border-top:1px solid var(--bd);padding:64px 64px 36p
       <!-- Phone 3: Savings Vault -->
       <div class="pv-wrap">
         <div class="ps2">
-          <img src="Wealth Vault.png" alt="Savings Vault" style="width:100%; height:100%; object-fit:cover; border-radius:18px;">
+          <img src="Wealth Vault.png" alt="Savings Vault"  class="es-9">
         </div>
         <div class="pv-label">Savings Vault</div>
       </div>
@@ -714,19 +750,19 @@ footer{background:var(--k2);border-top:1px solid var(--bd);padding:64px 64px 36p
     <!-- DESKTOP VIEW (Hidden on mobile) -->
     <div class="rv desktop-view-wrap">
       <div class="dv-label">Desktop Dashboard</div>
-      <div class="desktop-frame" style="position:relative">
+      <div class="desktop-frame es-10" >
         <div class="tilt-glare"><div class="tilt-glare-inner"></div></div>
         <div class="desktop-bar">
-          <div class="desk-dot" style="background:#4a4a4a"></div>
-          <div class="desk-dot" style="background:#3a3a3a"></div>
-          <div class="desk-dot" style="background:#2a2a2a"></div>
+          <div class="desk-dot es-11" ></div>
+          <div class="desk-dot es-12" ></div>
+          <div class="desk-dot es-13" ></div>
           <div class="desk-url">app.usezwap.com/dashboard</div>
-          <div style="font-size:11px;color:#444">⟳</div>
+          <div  class="es-14">⟳</div>
         </div>
         <div class="desk-body">
           <!-- App header — WHITE with black ZWAP -->
           <div class="db-header">
-            <div style="font-family:var(--fh);font-size:17px;font-weight:800;color:#000">ZWAP</div>
+            <div  class="es-15">ZWAP</div>
             <div class="db-nav">
               <div class="db-nav-item active">Dashboard</div>
               <div class="db-nav-item">Buy Crypto</div>
@@ -736,19 +772,19 @@ footer{background:var(--k2);border-top:1px solid var(--bd);padding:64px 64px 36p
             </div>
             <div class="db-user">
               <div class="db-av">D</div>
-              <div><div class="db-uname">Afiakurue David</div><div style="font-size:9px;color:#888">ZID-4X9RK2</div></div>
+              <div><div class="db-uname">Afiakurue David</div><div  class="es-16">ZID-4X9RK2</div></div>
             </div>
           </div>
           <div class="db-content">
             <div class="db-sidebar">
-              <div style="font-size:10px;color:#aaa;letter-spacing:1px;text-transform:uppercase;margin-bottom:12px">Menu</div>
+              <div  class="es-17">Menu</div>
               <div class="db-menu-item active"><span class="db-menu-icon">⊞</span>Overview</div>
               <div class="db-menu-item"><span class="db-menu-icon">₿</span>Buy Crypto</div>
               <div class="db-menu-item"><span class="db-menu-icon">↓</span>Deposit</div>
               <div class="db-menu-item"><span class="db-menu-icon">↑</span>Withdraw</div>
               <div class="db-menu-item"><span class="db-menu-icon">🛡</span>Savings</div>
               <div class="db-menu-item"><span class="db-menu-icon">💳</span>Cards</div>
-              <div style="border-top:1px solid #eee;margin:12px 0"></div>
+              <div  class="es-18"></div>
               <div class="db-menu-item"><span class="db-menu-icon">⚙</span>Settings</div>
               <div class="db-menu-item"><span class="db-menu-icon">?</span>Support</div>
             </div>
@@ -777,27 +813,27 @@ footer{background:var(--k2);border-top:1px solid var(--bd);padding:64px 64px 36p
                   <div class="db-txn-see">View all →</div>
                 </div>
                 <div class="db-txn-row">
-                  <div class="db-txn-av" style="background:#888">D</div>
-                  <div style="flex:1"><div class="db-txn-nm">From David Z.</div><div class="db-txn-meta">Deposit · USDT</div></div>
-                  <div style="font-size:10px;color:#aaa;margin-right:14px">10:46 AM</div>
+                  <div class="db-txn-av es-19" >D</div>
+                  <div  class="es-20"><div class="db-txn-nm">From David Z.</div><div class="db-txn-meta">Deposit · USDT</div></div>
+                  <div  class="es-21">10:46 AM</div>
                   <div class="db-txn-amt db-green">+$62.30</div>
                 </div>
                 <div class="db-txn-row">
-                  <div class="db-txn-av" style="background:#1a6ef5">D</div>
-                  <div style="flex:1"><div class="db-txn-nm">To Daniel Xue</div><div class="db-txn-meta">Transfer · Naira</div></div>
-                  <div style="font-size:10px;color:#aaa;margin-right:14px">10:46 AM</div>
+                  <div class="db-txn-av es-22" >D</div>
+                  <div  class="es-20"><div class="db-txn-nm">To Daniel Xue</div><div class="db-txn-meta">Transfer · Naira</div></div>
+                  <div  class="es-21">10:46 AM</div>
                   <div class="db-txn-amt db-red">-$14.35</div>
                 </div>
                 <div class="db-txn-row">
-                  <div class="db-txn-av" style="background:#7c3aed">P</div>
-                  <div style="flex:1"><div class="db-txn-nm">From Pristian</div><div class="db-txn-meta">Deposit · USDC</div></div>
-                  <div style="font-size:10px;color:#aaa;margin-right:14px">10:46 AM</div>
+                  <div class="db-txn-av es-23" >P</div>
+                  <div  class="es-20"><div class="db-txn-nm">From Pristian</div><div class="db-txn-meta">Deposit · USDC</div></div>
+                  <div  class="es-21">10:46 AM</div>
                   <div class="db-txn-amt db-green">+$8.12</div>
                 </div>
                 <div class="db-txn-row">
-                  <div class="db-txn-av" style="background:#f97316">A</div>
-                  <div style="flex:1"><div class="db-txn-nm">Buy BTC</div><div class="db-txn-meta">Crypto · 0x7a3f...D91C</div></div>
-                  <div style="font-size:10px;color:#aaa;margin-right:14px">9:14 AM</div>
+                  <div class="db-txn-av es-24" >A</div>
+                  <div  class="es-20"><div class="db-txn-nm">Buy BTC</div><div class="db-txn-meta">Crypto · 0x7a3f...D91C</div></div>
+                  <div  class="es-21">9:14 AM</div>
                   <div class="db-txn-amt db-red">-₦200,000</div>
                 </div>
               </div>
@@ -813,7 +849,7 @@ footer{background:var(--k2);border-top:1px solid var(--bd);padding:64px 64px 36p
 <div class="div"></div>
 
 <!-- ════ UVP SECTION ════ -->
-<section class="uvps" style="position:relative">
+<section class="uvps es-10" >
   <div class="ambient-glow g3"></div>
   <div class="con">
     <div class="ui">
@@ -831,9 +867,9 @@ footer{background:var(--k2);border-top:1px solid var(--bd);padding:64px 64px 36p
       <div class="rv">
         <div class="term">
           <div class="tb">
-            <div class="td" style="background:#3a3a3a"></div>
-            <div class="td" style="background:#2a2a2a"></div>
-            <div class="td" style="background:#1a1a1a"></div>
+            <div class="td es-12" ></div>
+            <div class="td es-13" ></div>
+            <div class="td es-25" ></div>
             <span class="tt2">ZWAP — Transaction Log</span>
           </div>
           <div class="tbody">
@@ -877,27 +913,27 @@ footer{background:var(--k2);border-top:1px solid var(--bd);padding:64px 64px 36p
           <li><div class="cfd"></div>Real-time spend notifications</li>
           <li><div class="cfd"></div>ATM cash withdrawals globally</li>
         </ul>
-        <div style="margin-top:32px">
-          <a href="https://usezwap.com/user_register" style="text-decoration:none;color:#fff;font-size:18px;font-family:var(--fh);font-weight:700">Get Your Card →</a>
+        <div  class="es-26">
+          <a href="https://usezwap.com/user_register"  class="es-27">Get Your Card →</a>
         </div>
       </div>
       <div class="cv rv">
         <div class="vw vb">
-          <div style="font-size:16px;color:#333">💳</div>
-          <div class="vn" style="letter-spacing:4px">**** **** **** ****</div>
+          <div  class="es-28">💳</div>
+          <div class="vn es-29" >**** **** **** ****</div>
           <div class="vrow">
             <div><div class="vfl">CARDHOLDER</div><div class="vfv">*** ***</div></div>
-            <div class="vvisa" style="color:#333">VISA</div>
+            <div class="vvisa es-30" >VISA</div>
           </div>
         </div>
         <div class="vw vm">
-          <div style="font-size:22px">💳</div>
+          <div  class="es-31">💳</div>
           <div class="vn">**** &nbsp;**** &nbsp;**** &nbsp;****</div>
           <div class="vrow">
             <div><div class="vfl">Card Holder</div><div class="vfv">*** ***</div></div>
-            <div style="text-align:right"><div class="vfl">Expires</div><div class="vfv">**/**</div></div>
+            <div  class="es-32"><div class="vfl">Expires</div><div class="vfv">**/**</div></div>
           </div>
-          <div style="display:flex;justify-content:flex-end;margin-top:-6px"><div class="vvisa">VISA</div></div>
+          <div  class="es-33"><div class="vvisa">VISA</div></div>
         </div>
       </div>
     </div>
@@ -909,7 +945,7 @@ footer{background:var(--k2);border-top:1px solid var(--bd);padding:64px 64px 36p
 <!-- ════ FAQ ════ -->
 <section class="fqs" id="faq">
   <div class="con">
-    <div style="text-align:center"><div class="ew rv" style="text-align:center">FAQ</div><h2 class="sh rv" style="text-align:center">Common questions</h2></div>
+    <div  class="es-7"><div class="ew rv es-7" >FAQ</div><h2 class="sh rv es-7" >Common questions</h2></div>
     <div class="fw">
       <div class="fi2"><button class="fb2" onclick="tf(this)">What is ZWAP?<span class="fa2">+</span></button><div class="fba">ZWAP is a crypto &amp; fiat payments platform that automatically converts incoming cryptocurrency to local naira the moment it arrives. You can also buy crypto by wallet address, save in stablecoins, and withdraw to any bank account.</div></div>
       <div class="fi2"><button class="fb2" onclick="tf(this)">How does the automatic conversion work?<span class="fa2">+</span></button><div class="fba">Send any supported crypto to your ZWAP deposit address. We detect it on-chain, convert to naira at the live rate, deduct 0.85%, and credit your balance — within 30–90 seconds. No action from you.</div></div>
@@ -928,7 +964,7 @@ footer{background:var(--k2);border-top:1px solid var(--bd);padding:64px 64px 36p
 <!-- ════ CTA ════ -->
 <section class="ctas-sec">
   <div class="con">
-    <div class="ew rv" style="color:var(--gm);text-align:center">Get started</div>
+    <div class="ew rv es-34" >Get started</div>
     <h2 class="ctat rv">Crypto &amp; fiat<br/>payments made easy.</h2>
     <p class="ctas-sub rv">Deposit. Buy. Save. Withdraw. Everything in one place — built for you.</p>
     <div class="ctab rv">
