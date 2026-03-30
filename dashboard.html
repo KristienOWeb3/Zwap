@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ZWAP Dashboard</title>
+  <style>
+    :root {
+      --bg: #000000;
+      --sidebar-bg: #050505;
+      --card-bg: #111111;
+      --text-main: #ffffff;
+      --text-muted: #a1a1aa;
+      --border: rgba(255, 255, 255, 0.08);
+      --green: #10B981;
+      --red: #ef4444;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text-main);
+      font-family: 'Futura', system-ui, sans-serif;
+      display: grid;
+      grid-template-columns: 260px 1fr;
+      min-height: 100vh;
+    }
+
+    /* === SIDEBAR === */
+    aside {
+      background: var(--sidebar-bg);
+      border-right: 1px solid var(--border);
+      padding: 32px 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+      position: sticky;
+      top: 0;
+      height: 100vh;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+      color: var(--text-main);
+      letter-spacing: -0.5px;
+    }
+
+    .nav-links {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .nav-link {
+      color: var(--text-muted);
+      font-size: 14px;
+      text-decoration: none;
+      padding: 12px 16px;
+      border-radius: 12px;
+      transition: all 0.2s;
+    }
+
+    .nav-link:hover {
+      color: var(--text-main);
+    }
+
+    .nav-link.active {
+      background: var(--border);
+      color: var(--text-main);
+      font-weight: 600;
+    }
+
+    .bottom-links {
+      margin-top: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    /* === MAIN LAYOUT === */
+    main {
+      background: radial-gradient(circle at 50% 0%, #151515 0%, #000000 70%);
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* === HEADER === */
+    header {
+      height: 80px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 40px;
+      border-bottom: 1px solid var(--border);
+      background: rgba(10, 10, 10, 0.4);
+      backdrop-filter: blur(24px) saturate(180%);
+      -webkit-backdrop-filter: blur(24px) saturate(180%);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .header-links {
+      display: flex;
+      gap: 24px;
+    }
+
+    .header-links a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+
+    .header-links a:hover {
+      color: var(--text-main);
+    }
+
+    .profile-widget {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      cursor: pointer;
+    }
+
+    .avatar {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: #000;
+      border: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    .profile-info {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .profile-name {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text-main);
+    }
+
+    .profile-zid {
+      font-size: 11px;
+      color: var(--text-muted);
+    }
+
+    /* === CONTENT AREA === */
+    .content-area {
+      padding: 40px;
+      flex: 1;
+    }
+
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-bottom: 40px;
+    }
+
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: 28px;
+      transition: transform 0.3s ease;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+    }
+
+    .card.highlight {
+      background: linear-gradient(135deg, #151515 0%, #0a0a0a 100%);
+      border-color: rgba(255, 255, 255, 0.15);
+    }
+
+    .card-label {
+      font-size: 11px;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      letter-spacing: 1px;
+      margin-bottom: 8px;
+    }
+
+    .card-amount {
+      font-size: 28px;
+      font-weight: bold;
+      color: var(--text-main);
+      margin-bottom: 4px;
+    }
+
+    .card-subtext {
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+
+    /* === TRANSACTIONS === */
+    .txn-container {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: 28px;
+    }
+
+    .txn-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 24px;
+    }
+
+    .txn-title {
+      font-size: 16px;
+      font-weight: bold;
+      color: var(--text-main);
+    }
+
+    .txn-view-all {
+      font-size: 13px;
+      color: var(--text-muted);
+      text-decoration: none;
+    }
+    
+    .txn-view-all:hover {
+      color: var(--text-main);
+    }
+
+    .txn-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .txn-row:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    .txn-left {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    
+    .txn-avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: #1a1a1a;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      font-weight: bold;
+      color: var(--text-main);
+    }
+
+    .txn-avatar.green { background: rgba(16, 185, 129, 0.2); color: var(--green); }
+    .txn-avatar.red { background: rgba(239, 68, 68, 0.2); color: var(--red); }
+    .txn-avatar.blue { background: rgba(59, 130, 246, 0.2); color: #3b82f6; }
+
+    .txn-info {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .txn-name {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text-main);
+    }
+
+    .txn-action {
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+
+    .txn-right {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 2px;
+    }
+
+    .txn-amount {
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+    .txn-amount.positive {
+      color: var(--green);
+    }
+
+    .txn-amount.negative {
+      color: var(--red);
+    }
+
+    .txn-time {
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- SIDEBAR -->
+  <aside>
+    <div class="logo">ZWAP</div>
+    
+    <div class="nav-links">
+      <a href="#" class="nav-link active">Overview</a>
+      <a href="#" class="nav-link">Buy Crypto</a>
+      <a href="#" class="nav-link">Deposit</a>
+      <a href="#" class="nav-link">Withdraw</a>
+      <a href="#" class="nav-link">Savings</a>
+      <a href="#" class="nav-link">Cards</a>
+    </div>
+
+    <div class="bottom-links">
+      <a href="#" class="nav-link">Settings</a>
+      <a href="#" class="nav-link">Support</a>
+    </div>
+  </aside>
+
+  <!-- MAIN AREA -->
+  <main>
+    
+    <!-- HEADER -->
+    <header>
+      <div class="header-links">
+        <a href="#">Dashboard</a>
+        <a href="#">Buy Crypto</a>
+        <a href="#">Savings</a>
+        <a href="#">Cards</a>
+        <a href="#">Transactions</a>
+      </div>
+
+      <div class="profile-widget">
+        <div class="avatar">D</div>
+        <div class="profile-info">
+          <span class="profile-name">Aflakurue David</span>
+          <span class="profile-zid">ZID-4X9RK2</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- CONTENT -->
+    <div class="content-area">
+      
+      <!-- TOP CARDS -->
+      <div class="cards-grid">
+        <!-- Card 1 -->
+        <div class="card highlight">
+          <div class="card-label">TOTAL BALANCE</div>
+          <div class="card-amount">₦138,300</div>
+          <div class="card-subtext">≈ $100.50 USD</div>
+        </div>
+        
+        <!-- Card 2 -->
+        <div class="card">
+          <div class="card-label">NAIRA BALANCE</div>
+          <div class="card-amount">₦138,300</div>
+          <div class="card-subtext">Available to withdraw</div>
+        </div>
+        
+        <!-- Card 3 -->
+        <div class="card">
+          <div class="card-label">WEALTH VAULT</div>
+          <div class="card-amount">$0.00</div>
+          <div class="card-subtext">Earning 12% APY</div>
+        </div>
+      </div>
+
+      <!-- TRANSACTIONS -->
+      <div class="txn-container">
+        <div class="txn-header">
+          <div class="txn-title">Recent Transactions</div>
+          <a href="#" class="txn-view-all">View all</a>
+        </div>
+
+        <div class="txn-list">
+          
+          <!-- Txn 1 -->
+          <div class="txn-row">
+            <div class="txn-left">
+              <div class="txn-avatar green">↓</div>
+              <div class="txn-info">
+                <span class="txn-name">Deposit Crypto</span>
+                <span class="txn-action">USDT via TRC20</span>
+              </div>
+            </div>
+            <div class="txn-right">
+              <span class="txn-amount positive">+ ₦75,500</span>
+              <span class="txn-time">Today, 2:45 PM</span>
+            </div>
+          </div>
+          
+          <!-- Txn 2 -->
+          <div class="txn-row">
+            <div class="txn-left">
+              <div class="txn-avatar blue">⇌</div>
+              <div class="txn-info">
+                <span class="txn-name">Convert to Naira</span>
+                <span class="txn-action">Sold 50 USDT</span>
+              </div>
+            </div>
+            <div class="txn-right">
+              <span class="txn-amount positive">+ ₦75,000</span>
+              <span class="txn-time">Today, 2:50 PM</span>
+            </div>
+          </div>
+
+          <!-- Txn 3 -->
+          <div class="txn-row">
+            <div class="txn-left">
+              <div class="txn-avatar red">↑</div>
+              <div class="txn-info">
+                <span class="txn-name">Bank Withdrawal</span>
+                <span class="txn-action">David Aflakurue - GTBank</span>
+              </div>
+            </div>
+            <div class="txn-right">
+              <span class="txn-amount negative">- ₦20,000</span>
+              <span class="txn-time">Yesterday, 9:15 AM</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </main>
+</body>
+</html>
