@@ -12,12 +12,14 @@
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
   --k:#0a0a0a;--k2:#111111;--k3:#1A1A1A;--k4:#222;
-  --gd:#333;--gm:#71717a;--gl:#a1a1aa;--gx:#CCC;--g5:#555;
+  --gd:#333;--gm:#a1a1aa;--gl:#d4d4d8;--gx:#CCC;--g5:#555;
   --w:#fafafa;--bd:#2A2A2A;--bdl:#E5E5E5;
   --fh: 'EB Garamond', Garamond, Baskerville, 'Baskerville Old Face', 'Hoefler Text', 'Times New Roman', serif;--fb: 'EB Garamond', Garamond, Baskerville, 'Baskerville Old Face', 'Hoefler Text', 'Times New Roman', serif;
 }
 
-body{font-family: var(--fb);background:#000000;color:var(--w);overflow-x:hidden;line-height:1.7;font-size:16px;}
+html{width:100%;max-width:100%;overflow-x:hidden}
+body{width:100%;max-width:100vw;font-family:var(--fb);background:#000000;color:var(--w);overflow-x:hidden;line-height:1.7;font-size:16px;}
+img,video,canvas,svg{max-width:100%}
 .grid-bg {
   position: absolute;
   inset: 0;
@@ -148,6 +150,7 @@ nav::before {
 }
 
 .hero-center img {
+  max-width: 100%;
   max-height: 85vh;
   width: auto;
   object-fit: contain;
@@ -166,10 +169,10 @@ nav::before {
 .hbdot{width:7px;height:7px;border-radius:50%;background:var(--w);animation:pulse 2.5s infinite}
 @keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.4;transform:scale(1.6)}}
 
-h1.hero-h1{font-family: var(--fh);font-size:clamp(34px, 4vw, 53px);font-weight:800;line-height:1.06;letter-spacing:-2px;margin-bottom:28px}
+h1.hero-h1{font-family: var(--fh);font-size:clamp(34px, 4vw, 53px);font-weight:800;line-height:1.06;letter-spacing:-1px;margin-bottom:28px;text-shadow:0 0 20px rgba(255,255,255,0.1)}
 h1.hero-h1 .dim{color:var(--gm)}
 
-.hsub{font-size:13px;color:var(--gl);max-width:340px;line-height:1.6;margin-bottom:44px}
+.hsub{font-size:16px;color:var(--gl);max-width:340px;line-height:1.7;margin-bottom:44px}
 .ha{display:flex;gap:14px;flex-wrap:wrap}
 .bh2{
   padding:12px 20px;background:var(--w);border:none;border-radius:24px;
@@ -186,7 +189,7 @@ h1.hero-h1 .dim{color:var(--gm)}
 }
 .bho2:hover{border-color:var(--w);color:var(--w)}
 .hstats{display:flex;flex-wrap:wrap;gap:24px;margin-top:32px;padding-top:24px;border-top:1px solid rgba(255,255,255,0.1)}
-.snum{font-family: var(--fh);font-size:18px;font-weight:800;color:var(--w);letter-spacing:-.5px}
+.snum{font-family: var(--fh);font-size:18px;font-weight:900;color:var(--w);letter-spacing:-.25px}
 .slbl{font-size:10px;color:var(--gm);margin-top:2px}
 
 /* ── PHONE MOCKUP (hero right) — 3D Scroll Animation ── */
@@ -256,7 +259,7 @@ h1.hero-h1 .dim{color:var(--gm)}
 }
 .bal-label{font-size:10px;color:#888;text-align:center;text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px}
 /* FIXED: Naira balance display - larger and clear */
-.bal-amount{font-family: var(--fh);font-size:22px;font-weight:800;color:#fff;text-align:center;letter-spacing:-.5px;white-space:nowrap}
+.bal-amount{font-family: var(--fh);font-size:22px;font-weight:900;color:var(--w);text-align:center;letter-spacing:-.25px;white-space:nowrap}
 .bal-naira{font-size:11px;color:#666;text-align:center;margin-top:3px;margin-bottom:12px}
 .mini-chart{height:46px;position:relative;margin-bottom:10px}
 .mini-chart svg{width:100%;height:100%}
@@ -312,7 +315,7 @@ section{padding:104px 64px;position:relative}
 .con{max-width:1200px;margin:0 auto;width:100%}
 .div{display:none;}
 .ew{font-size:12px;letter-spacing:3px;text-transform:uppercase;color:var(--gm);font-weight:600;margin-bottom:16px}
-.sh{font-family: var(--fb);font-size:clamp(32px,3.8vw,50px);font-weight:800;line-height:1.12;letter-spacing:-1px;margin-bottom:20px}
+.sh{font-family: var(--fb);font-size:clamp(32px,3.8vw,50px);font-weight:800;line-height:1.12;letter-spacing:-0.5px;margin-bottom:20px;text-shadow:0 0 20px rgba(255,255,255,0.1)}
 .ss{font-size:17px;color:var(--gm);max-width:540px;line-height:1.85}
 
 /* ── SHOWCASE ── */
@@ -440,7 +443,7 @@ section{padding:104px 64px;position:relative}
 
 .sti{font-family: var(--fh);font-size:19px;font-weight:700;color:var(--w);margin-bottom:0px;}
 .sde{
-  opacity: 0; transform: translateY(15px); transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1) 0.1s; white-space: normal; line-height: 1.5; font-size: 13px; display: block; height: 0; color: var(--gm); margin-top: 0;
+  opacity: 0; transform: translateY(15px); transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1) 0.1s; white-space: normal; line-height: 1.65; font-size: 15px; display: block; height: 0; color: var(--gl); margin-top: 0;
 }
 
 /* ── PILLARS ── */
@@ -474,25 +477,138 @@ section{padding:104px 64px;position:relative}
 .pn{font-family: var(--fh);font-size:13px;font-weight:700;color:var(--bd);margin-bottom:20px;letter-spacing:1px}
 .pic{font-size:26px;margin-bottom:16px;display:none;}
 .pt{font-family:var(--fh);font-size:16px;font-weight:700;color:var(--w);margin-bottom:10px;line-height:1.3}
-.pd{font-size:13px;color:var(--gm);line-height:1.8}
+.pd{font-size:15px;color:var(--gl);line-height:1.85}
 
 /* ── VIEWS SECTION ── */
-.views-intro{text-align:center;margin-bottom:72px}
+.views-sec{padding:104px 0 0}
+.views-intro{text-align:center;margin-bottom:60px}
 .views-intro .ss{margin-inline:auto}
-.phone-views-row{display:flex;justify-content:center;gap:40px;margin-bottom:88px;flex-wrap:wrap}
-.pv-wrap{display:flex;flex-direction:column;align-items:center;gap:16px}
-.pv-label{font-size:12px;color:var(--gm);letter-spacing:2px;text-transform:uppercase}
-
-.desktop-view-wrap{max-width:1020px;margin:0 auto}
-.dv-label{font-size:12px;color:var(--gm);letter-spacing:2px;text-transform:uppercase;text-align:center;margin-bottom:18px}
+.scroll-track{
+  position:relative;
+  width:100%;
+}
+.split-layout{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  width:100%;
+  gap:clamp(32px,5vw,88px);
+}
+.sticky-ui{
+  position:relative;
+  min-height:100vh;
+  width:100%;
+  z-index:2;
+  display:flex;
+  align-items:center;
+  overflow:hidden;
+}
+.text-stack{
+  position:relative;
+  width:48%;
+  height:500px;
+  background:transparent;
+}
+.step,.step-text,.text-stack div{
+  background:transparent !important;
+  border:none !important;
+  box-shadow:none !important;
+}
+.step-text{
+  position:absolute;
+  inset:0;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  width:100%;
+  height:100%;
+  padding:48px 0;
+  background:transparent;
+  opacity:0;
+  visibility:hidden;
+  transform:translateY(10px);
+  transition:opacity .6s ease,visibility .6s,transform .6s ease;
+}
+.step-index{
+  font-size:12px;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  color:var(--gm);
+  margin-bottom:18px;
+}
+.step-title{
+  font-family:var(--fh);
+  font-size:clamp(28px,3vw,42px);
+  font-weight:800;
+  line-height:1.08;
+  letter-spacing:-1px;
+  color:var(--w);
+  margin-bottom:18px;
+}
+.step-copy{
+  font-size:16px;
+  line-height:1.9;
+  color:var(--gl);
+  max-width:42ch;
+}
+.step-text-media{display:none}
+.phone-stack{
+  position:relative;
+  width:48%;
+  height:500px;
+  background:transparent;
+  border:none !important;
+  box-shadow:none !important;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.views-phone-shell{
+  width:min(100%, 320px);
+  height:500px;
+  background:transparent;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
 
 .ps2{
-  width:228px;background:#0A0A0A;border-radius:38px;border:2px solid #2a2a2a;
-  padding:12px;box-shadow:0 30px 70px rgba(0,0,0,.8),0 0 0 1px rgba(255,255,255,.05);
+  width:228px;background:transparent !important;border:none !important;border-radius:0 !important;
+  padding:0 !important;box-shadow:none !important;
   position:relative;
 }
-.ps2::before{content:"";position:absolute;top:0;left:50%;transform:translateX(-50%);width:60px;height:20px;background:#0A0A0A;border-radius:0 0 14px 14px;z-index:10}
+.phone-stack .ps2,.step-text-media .ps2{
+  width:min(100%, 296px);
+  background:transparent;
+}
+.ps2::before{display:none !important}
 .ps2-screen{background:#F0F0F2;border-radius:28px;overflow:hidden;min-height:420px}
+.views-phone-screen{
+  position:relative;
+  width:100%;
+  aspect-ratio:9 / 19.5;
+  border-radius:0;
+  overflow:hidden;
+  background:transparent;
+}
+.step-image{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  opacity:0;
+  visibility:hidden;
+  border-radius:0;
+  background:transparent;
+  transform:translateY(10px);
+  transition:opacity .6s ease,visibility .6s,transform .6s ease;
+}
+.active-content{
+  opacity:1;
+  visibility:visible;
+  transform:translateY(0);
+}
 
 /* Buy crypto screen */
 .buy-screen{background:#F0F0F2;padding:14px 13px;min-height:420px;font-family:var(--fb)}
@@ -518,7 +634,7 @@ section{padding:104px 64px;position:relative}
 .save-screen{background:#F0F0F2;padding:13px;min-height:420px;font-family:var(--fb)}
 .save-vault-card{background:#0D0D0D;border-radius:15px;padding:15px;margin-bottom:12px}
 .svc-label{font-size:10px;color:#666;margin-bottom:3px}
-.svc-amount{font-family:var(--fh);font-size:20px;font-weight:800;color:#fff}
+.svc-amount{font-family:var(--fh);font-size:20px;font-weight:900;color:var(--w)}
 .svc-usd{font-size:10px;color:#555;margin-top:2px}
 .svc-yield{display:inline-flex;align-items:center;gap:5px;background:rgba(255,255,255,.06);border-radius:7px;padding:4px 9px;font-size:10px;color:#aaa;margin-top:9px}
 .svc-dot{width:5px;height:5px;border-radius:50%;background:#4ade80}
@@ -538,7 +654,7 @@ section{padding:104px 64px;position:relative}
 .ul li:last-child{border-bottom:none}
 .un{font-family:var(--fh);font-size:13px;font-weight:800;color:var(--bd);margin-top:2px;min-width:28px}
 .ut{font-family:var(--fh);font-size:16px;font-weight:700;color:var(--w);margin-bottom:7px}
-.ud{font-size:14px;color:var(--gm);line-height:1.8}
+.ud{font-size:16px;color:var(--gl);line-height:1.85}
 .term{background:var(--k);border:1px solid var(--bd);border-radius:16px;overflow:hidden;box-shadow:0 20px 40px rgba(0,0,0,.6)}
 .tb{background:var(--k3);padding:13px 18px;display:flex;align-items:center;gap:8px;border-bottom:1px solid var(--bd)}
 .td{width:11px;height:11px;border-radius:50%}
@@ -550,8 +666,8 @@ section{padding:104px 64px;position:relative}
 
 /* Card section */
 .ci{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
-.cv{position:relative;height:300px;display:flex;align-items:center;justify-content:center}
-.vw{position:absolute;width:340px;height:214px;border-radius:18px;padding:24px;display:flex;flex-direction:column;justify-content:space-between;transition:all 0.4s ease}
+.cv{position:relative;height:300px;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.vw{position:absolute;width:340px;max-width:100%;height:214px;border-radius:18px;padding:24px;display:flex;flex-direction:column;justify-content:space-between;transition:all 0.4s ease}
 .vm{background:linear-gradient(135deg, #ffffff 0%, #f0f0f0 100%);box-shadow:0 30px 60px rgba(0,0,0,.6),0 0 80px rgba(192,200,210,.5),inset 0 0 25px rgba(255,255,255,.5);z-index:2;transform:rotate(0deg);animation:floatMain 6s ease-in-out infinite}
 .vb{background:linear-gradient(135deg, #1a1a1a 0%, #333 100%);border:1px solid #444;box-shadow:0 20px 40px rgba(0,0,0,.6),0 0 60px rgba(170,180,190,.3);z-index:1;transform:rotate(4deg) translateX(30px);animation:floatBack 7s ease-in-out infinite 0.5s}
 @keyframes floatMain{0%,100%{transform:translateY(0) rotate(0deg)}50%{transform:translateY(-15px) rotate(1deg)}}
@@ -563,9 +679,9 @@ section{padding:104px 64px;position:relative}
 .vfl{font-size:11px;text-transform:uppercase;letter-spacing:.5px}
 .vm .vfl{color:var(--gm)}
 .vb .vfl{color:var(--gd)}
-.vfv{font-size:14px;font-weight:700;font-family:var(--fh)}
+.vfv{font-size:15px;font-weight:800;font-family:var(--fh);color:var(--w)}
 .vm .vfv{color:var(--k)}
-.vb .vfv{color:var(--gl)}
+.vb .vfv{color:var(--w)}
 .vvisa{font-family:var(--fh);font-size:22px;font-weight:800}
 .vm .vvisa{color:#1a1a1a;font-style:italic}
 .vb .vvisa{color:var(--gd)}
@@ -575,23 +691,24 @@ section{padding:104px 64px;position:relative}
 .cfd{width:6px;height:6px;border-radius:50%;background:var(--w);flex-shrink:0;margin-top:8px}
 
 
-.fw{max-width:720px;margin:60px auto 0}
-.fi2{border-bottom:1px solid var(--bd)}
-.fb2{width:100%;background:none;border:none;color:var(--w);font-family:var(--fb);font-size:16px;font-weight:500;text-align:left;padding:22px 0;cursor:pointer;display:flex;justify-content:space-between;align-items:center;transition:color .2s}
+.fw{max-width:720px;margin:60px auto 0;display:grid;gap:16px}
+.fi2{background:var(--k2);border:1px solid var(--bd);border-radius:16px;overflow:hidden;transition:border-color .25s ease,background .25s ease,box-shadow .25s ease}
+.fi2.open{background:var(--k3);border-color:rgba(255,255,255,0.12);box-shadow:0 16px 32px rgba(0,0,0,.28)}
+.fb2{width:100%;background:none;border:none;color:var(--w);font-family:var(--fb);font-size:16px;font-weight:500;text-align:left;padding:22px 24px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;transition:color .2s}
 .fb2:hover{color:var(--gl)}
-.fa2{font-size:20px;color:var(--gm);transition:transform .3s}
-.fba{font-size:15px;color:var(--gm);line-height:1.85;max-height:0;overflow:hidden;transition:max-height .4s ease,padding .3s}
-.fi2.open .fba{max-height:220px;padding-bottom:22px}
-.fi2.open .fa2{transform:rotate(45deg)}
+.fa2{display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;width:18px;height:18px;font-size:14px;line-height:1;color:var(--gm);transition:transform .3s ease,color .2s ease}
+.fba{padding:0 24px;font-size:16px;color:var(--gl);line-height:1.9;max-height:0;overflow:hidden;transition:max-height .4s ease,padding .3s ease}
+.fi2.open .fba{padding:0 24px 22px}
+.fi2.open .fa2{transform:rotate(180deg);color:var(--w)}
 
 /* CTA */
-.ctas-sec{background:var(--w);text-align:center;padding:104px 64px}
-.ctat{font-family:var(--fh);font-size:clamp(38px,5vw,64px);font-weight:800;color:var(--k);letter-spacing:-1.5px;line-height:1.08;margin-bottom:20px}
+.ctas-sec{background:linear-gradient(180deg, #000000 0%, #111111 50%, #000000 100%);text-align:center;padding:104px 64px}
+.ctat{font-family:var(--fh);font-size:clamp(38px,5vw,64px);font-weight:800;color:#ffffff;letter-spacing:-1px;line-height:1.08;margin-bottom:20px;text-shadow:0 0 20px rgba(255,255,255,0.1)}
 .ctas-sub{font-size:18px;color:var(--gm);margin-bottom:44px;max-width:460px;margin-inline:auto;line-height:1.8}
 .ctab{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
-.bcm{padding:16px 32px;background:var(--k);border:none;border-radius:10px;color:var(--w);font-family:var(--fb);font-size:15px;font-weight:700;cursor:pointer;transition:all .2s;text-decoration:none;display:inline-block}
+.bcm{padding:16px 32px;background:#ffffff;border:none;border-radius:24px;color:#000000;font-family:var(--fb);font-size:15px;font-weight:700;cursor:pointer;transition:all .2s;text-decoration:none;display:inline-block}
 .bcm:hover{background:var(--gd);transform:translateY(-2px)}
-.bco{padding:16px 32px;background:transparent;border:1px solid var(--bdl);border-radius:10px;color:var(--k);font-family:var(--fb);font-size:15px;font-weight:600;cursor:pointer;transition:all .2s;text-decoration:none;display:inline-block}
+.bco{padding:16px 32px;background:transparent;border:1.5px solid rgba(255, 255, 255, 0.2);border-radius:24px;color:#ffffff;font-family:var(--fb);font-size:15px;font-weight:600;cursor:pointer;transition:all .2s;text-decoration:none;display:inline-block}
 .bco:hover{border-color:var(--k)}
 
 /* Footer */
@@ -648,7 +765,9 @@ footer{background:linear-gradient(180deg, #000000 0%, #0a0a0a 100%);padding:64px
 /* Mobile Menu */
 .mobile-menu-overlay{
   position:fixed;top:0;left:0;right:0;bottom:0;
-  background:rgba(0,0,0,.98);z-index:99;
+  background:rgba(5, 5, 5, 0.75);z-index:99;
+  -webkit-backdrop-filter: blur(24px) saturate(180%);
+  backdrop-filter: blur(24px) saturate(180%);
   display:flex;flex-direction:column;justify-content:center;align-items:center;
   opacity:0;visibility:hidden;transition:opacity 0.3s;
 }
@@ -657,6 +776,7 @@ footer{background:linear-gradient(180deg, #000000 0%, #0a0a0a 100%);padding:64px
   color:#fff;font-size:26px;margin:16px 0;
   text-decoration:none;font-family: var(--fh);font-weight:700;
 }
+.mobile-menu-overlay a.es-3{color:#000;}
 .close-btn{
   position:absolute;top:22px;right:22px;color:#fff;font-size:30px;cursor:pointer;
   width:44px;height:44px;border-radius:50%;background:rgba(255,255,255,.1);
@@ -676,12 +796,15 @@ footer{background:linear-gradient(180deg, #000000 0%, #0a0a0a 100%);padding:64px
   .nl{display:none}
   .nc .bg2,.nc .bp2{display:none}
   .menu-toggle{display:flex}
+  body{max-width:100vw}
   section{padding:72px 24px}
-  .hero{padding:110px 24px 0px}
-  .hi{grid-template-columns:1fr; gap:0px;}
+  .hero{padding:110px 20px 0}
+  .hero,.hi,.con,.fw,.pg,.sg,.ui,.ci,.cv,.ctab,.fg2,.fbot{max-width:100%;overflow-x:clip}
+  .hi{grid-template-columns:1fr;gap:24px}
+  .hero-left,.hero-center,.hero-right{min-width:0}
   .hero-mockup{display:none}
   .hero-left, .hero-right { padding-bottom: 30px; }
-  .hero-center img { max-height: 50vh; }
+  .hero-center img, .hero-main-img { max-height: 50vh; max-width: 100%; }
   .hstats{flex-wrap:wrap;gap:24px;justify-content:space-between}
   .hsub{margin-bottom:36px;font-size:16px}
   .sg {
@@ -705,13 +828,23 @@ footer{background:linear-gradient(180deg, #000000 0%, #0a0a0a 100%);padding:64px
     height: auto;
     margin-top: 12px;
   }
-  .pg{grid-template-columns:1fr 1fr}
+  .pg{grid-template-columns:1fr 1fr;padding-bottom:0}
+  .pc{padding:40px 28px;min-height:280px}
+  .pc:nth-child(n){grid-column:auto;top:0}
   .showcase-inner,.ui,.ci{grid-template-columns:1fr}
-  .phone-views-row{gap:24px;margin-bottom:48px}
-  .desktop-view-wrap{display:none}
+  .views-sec{padding:72px 0 0}
+  .sticky-ui{min-height:auto;width:100%;display:block;overflow:visible}
+  .split-layout{display:block}
+  .text-stack{position:static;width:100%;height:auto;display:grid;gap:28px}
+  .step-text{position:relative;inset:auto;width:100%;height:auto;padding:28px 24px;opacity:1;visibility:visible;transform:none;transition:none}
+  .step-text-media{display:block;margin-top:24px}
+  .step-text-media .ps2{width:min(100%,280px);margin-inline:auto}
+  .phone-stack{display:none;width:100%;height:auto}
+  .views-phone-shell{height:auto}
   .ui{gap:44px}
   .term{margin-top:36px}
   .cv{height:400px;margin-top:36px}
+  .vw{width:min(100%,340px)}
   footer{padding:48px 24px 28px}
   .fg2{grid-template-columns:1fr 1fr;gap:36px}
   .fbot{flex-direction:column;gap:14px}
@@ -719,15 +852,30 @@ footer{background:linear-gradient(180deg, #000000 0%, #0a0a0a 100%);padding:64px
 }
 
 @media(max-width:600px){
-  .pg{grid-template-columns:1fr}
+  .hero{padding:104px 16px 0}
+  section{padding:64px 16px}
+  .views-sec{padding:64px 0 0}
+  footer{padding:44px 16px 28px}
+  .pg{grid-template-columns:1fr;gap:18px}
+  .pc{min-height:auto;padding:26px 22px}
+  .step-text{padding:24px 20px}
+  .step-title{font-size:32px}
+  .step-copy{font-size:15px}
   .hstats{gap:18px}
   .snum{font-size:22px}
+  .fb2{padding:18px 20px;font-size:15px}
+  .fba{padding:0 20px;font-size:15px}
+  .fi2.open .fba{padding:0 20px 18px}
+  .cv{height:320px}
+  .vw{width:min(100%,300px);padding:20px}
+  .vm{transform:none;animation:none}
+  .vb{transform:rotate(3deg) translateX(12px);animation:none}
 }
 
 /* Extracted Inline Styles */
 .es-1 { margin-top:32px;display:flex;gap:14px; }
-.es-2 { display:block;padding:12px 26px;border:1.5px solid #fff;border-radius:8px;font-size:15px; }
-.es-3 { display:block;padding:12px 26px;background:#fff;color:#000;border-radius:8px;font-size:15px;font-weight:700; }
+.es-2 { display:block;padding:14px 32px;border:1.5px solid #fff;border-radius:24px;font-size:15px; }
+.es-3 { display:block;padding:14px 32px;background:#fff;color:#000;border-radius:24px;font-size:15px;font-weight:700; }
 .es-4 { transform:none !important; }
 .es-5 { padding:0; display:flex; align-items:center; justify-content:center; background:none; }
 .es-6 { width:100%; height:100%; object-fit:cover; border-radius:32px; }
@@ -913,136 +1061,105 @@ footer{background:linear-gradient(180deg, #000000 0%, #0a0a0a 100%);padding:64px
 <section class="views-sec" id="views">
   <div class="con">
     <div class="views-intro rv">
-      <div class="ew es-7" >Product Views</div>
-      <h2 class="sh es-7" >Designed for the way<br/>you actually use money.</h2>
-      <p class="ss rv es-8" >Clean, fast, and intuitive — whether you're on your phone or your laptop. ZWAP works beautifully on every screen.</p>
+      <div class="ew">Product Views</div>
+      <h2 class="sh">Designed for the way you actually use money.</h2>
+      <p class="ss">Clean, fast, and intuitive whether you're on your phone or your laptop. ZWAP works beautifully on every screen.</p>
     </div>
+  </div>
 
-    <!-- 3 PHONE VIEWS SIDE BY SIDE -->
-    <div class="phone-views-row rv">
-
-      <!-- Phone 1: Home Dashboard -->
-      <div class="pv-wrap">
-        <div class="ps2">
-          <img src="App Mainpage.png" alt="Home Dashboard"  class="es-9">
-        </div>
-        <div class="pv-label">Home Dashboard</div>
-      </div>
-
-      <!-- Phone 2: Buy Crypto Screen -->
-      <div class="pv-wrap">
-        <div class="ps2">
-          <img src="_Buy crypto_ clicked.png" alt="Buy Crypto Screen"  class="es-9">
-        </div>
-        <div class="pv-label">Buy Crypto</div>
-      </div>
-
-      <!-- Phone 3: Savings Vault -->
-      <div class="pv-wrap">
-        <div class="ps2">
-          <img src="Wealth Vault.png" alt="Savings Vault"  class="es-9">
-        </div>
-        <div class="pv-label">Savings Vault</div>
-      </div>
-
-    </div><!-- end phone views row -->
-
-    <!-- DESKTOP VIEW (Hidden on mobile) -->
-    <div class="rv desktop-view-wrap">
-      <div class="dv-label">Desktop Dashboard</div>
-      <div class="desktop-frame es-10" >
-        <div class="tilt-glare"><div class="tilt-glare-inner"></div></div>
-        <div class="desktop-bar">
-          <div class="desk-dot es-11" ></div>
-          <div class="desk-dot es-12" ></div>
-          <div class="desk-dot es-13" ></div>
-          <div class="desk-url">app.usezwap.com/dashboard</div>
-          <div  class="es-14"></div>
-        </div>
-        <div class="desk-body">
-          <!-- App header — WHITE with black ZWAP -->
-          <div class="db-header">
-            <div  class="es-15">ZWAP</div>
-            <div class="db-nav">
-              <div class="db-nav-item active">Dashboard</div>
-              <div class="db-nav-item">Buy Crypto</div>
-              <div class="db-nav-item">Savings</div>
-              <div class="db-nav-item">Cards</div>
-              <div class="db-nav-item">Transactions</div>
-            </div>
-            <div class="db-user">
-              <div class="db-av">D</div>
-              <div><div class="db-uname">Afiakurue David</div><div  class="es-16">ZID-4X9RK2</div></div>
-            </div>
-          </div>
-          <div class="db-content">
-            <div class="db-sidebar">
-              <div  class="es-17">Menu</div>
-              <div class="db-menu-item active"><span class="db-menu-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="color:currentColor;"><rect width="7" height="9" x="3" y="3" rx="1"/><rect width="7" height="5" x="14" y="3" rx="1"/><rect width="7" height="9" x="14" y="12" rx="1"/><rect width="7" height="5" x="3" y="16" rx="1"/></svg></span>Overview</div>
-              <div class="db-menu-item"><span class="db-menu-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="color:currentColor;"><path d="M11.767 19.089c4.924.868 6.14-6.025 1.216-6.894m-1.216 6.894L5.86 18.04m5.908 1.05-1.547-8.77m1.547 8.77-.457 2.59m-5.45-3.64-1.546-8.77m1.546 8.77-.457 2.59M9.131 5.642c4.398.775 5.234-5.352.836-6.127M9.131 5.642 3.82 4.706m5.312.936-1.546-8.77m-3.766 7.834L2.274 2.115M11.767 19.089c5.187.915 6.46-6.326 1.273-7.24M2.274 2.115l-1.89-3.23"/></svg></span>Buy Crypto</div>
-              <div class="db-menu-item"><span class="db-menu-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="color:currentColor;"><line x1="12" y1="5" x2="12" y2="19"/><polyline points="19 12 12 19 5 12"/></svg></span>Deposit</div>
-              <div class="db-menu-item"><span class="db-menu-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="color:currentColor;"><line x1="12" y1="19" x2="12" y2="5"/><polyline points="5 12 12 5 19 12"/></svg></span>Withdraw</div>
-              <div class="db-menu-item"><span class="db-menu-icon"></span>Savings</div>
-              <div class="db-menu-item"><span class="db-menu-icon"><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="color:var(--bd);"><rect width="20" height="14" x="2" y="5" rx="2"/><line x1="2" x2="22" y1="10" y2="10"/></svg></span>Cards</div>
-              <div  class="es-18"></div>
-              <div class="db-menu-item"><span class="db-menu-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="color:currentColor;"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg></span>Settings</div>
-              <div class="db-menu-item"><span class="db-menu-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="color:currentColor;"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg></span>Support</div>
-            </div>
-            <div class="db-main">
-              <!-- FIXED: Balance cards — ₦138,300.40 clearly displayed -->
-              <div class="db-cards-row">
-                <div class="db-card dark">
-                  <div class="dbc-label">Total Balance</div>
-                  <div class="dbc-val">₦138,300</div>
-                  <div class="dbc-sub">≈ $87.40 USD · Live rate</div>
-                </div>
-                <div class="db-card">
-                  <div class="dbc-label">Naira Balance</div>
-                  <div class="dbc-val">₦138,300</div>
-                  <div class="dbc-sub">Available to withdraw</div>
-                </div>
-                <div class="db-card">
-                  <div class="dbc-label">Savings Vault</div>
-                  <div class="dbc-val">$2,340.55</div>
-                  <div class="dbc-sub">5.0% p.a. · 90-Day Fixed</div>
+  <div class="scroll-track">
+    <div class="sticky-ui">
+      <div class="con split-layout">
+        <div class="text-stack">
+          <div class="step-text active-content" data-step-text="1">
+            <div class="step-index">Step 01</div>
+            <h3 class="step-title">Dashboard Overview</h3>
+            <p class="step-copy">Your financial command center. Track your entire portfolio across all assets, review full transaction history, and manage your funds instantly.</p>
+            <div class="step-text-media">
+              <div class="ps2">
+                <div class="views-phone-screen">
+                  <img src="Dashboard-portrait.png" alt="Dashboard Overview screen" class="step-image active-content">
                 </div>
               </div>
-              <div class="db-txn-section">
-                <div class="db-txn-head">
-                  <div class="db-txn-title">Recent Transactions</div>
-                  <div class="db-txn-see">View all ↗</div>
+            </div>
+          </div>
+          <div class="step-text" data-step-text="2">
+            <div class="step-index">Step 02</div>
+            <h3 class="step-title">Buy Crypto Instantly</h3>
+            <p class="step-copy">Convert your Naira to crypto effortlessly. Purchase massive volumes with transparent, low fees and send directly to any external wallet.</p>
+            <div class="step-text-media">
+              <div class="ps2">
+                <div class="views-phone-screen">
+                  <img src="_Buy crypto_ clicked-portrait.png" alt="Buy Crypto Instantly screen" class="step-image active-content">
                 </div>
-                <div class="db-txn-row">
-                  <div class="db-txn-av es-19" >D</div>
-                  <div  class="es-20"><div class="db-txn-nm">From David Z.</div><div class="db-txn-meta">Deposit · USDT</div></div>
-                  <div  class="es-21">10:46 AM</div>
-                  <div class="db-txn-amt db-green">+$62.30</div>
+              </div>
+            </div>
+          </div>
+          <div class="step-text" data-step-text="3">
+            <div class="step-index">Step 03</div>
+            <h3 class="step-title">Deposit &amp; Auto-Convert</h3>
+            <p class="step-copy">Deposit stablecoins or major tokens seamlessly from any supported network. Get credited in seconds with the best available routing.</p>
+            <div class="step-text-media">
+              <div class="ps2">
+                <div class="views-phone-screen">
+                  <img src="Deposit via Crypto-portrait.png" alt="Deposit and Auto-Convert screen" class="step-image active-content">
                 </div>
-                <div class="db-txn-row">
-                  <div class="db-txn-av es-22" >D</div>
-                  <div  class="es-20"><div class="db-txn-nm">To Daniel Xue</div><div class="db-txn-meta">Transfer · Naira</div></div>
-                  <div  class="es-21">10:46 AM</div>
-                  <div class="db-txn-amt db-red">-$14.35</div>
+              </div>
+            </div>
+          </div>
+          <div class="step-text" data-step-text="4">
+            <div class="step-index">Step 04</div>
+            <h3 class="step-title">Receive via ZWAP ID</h3>
+            <p class="step-copy">Receive zero-fee transfers instantly. Share your unique ZID or QR code with any ZWAP user for immediate, secure funding without exposing bank details.</p>
+            <div class="step-text-media">
+              <div class="ps2">
+                <div class="views-phone-screen">
+                  <img src="Deposit VIA ZID-portrait.png" alt="Receive via ZWAP ID screen" class="step-image active-content">
                 </div>
-                <div class="db-txn-row">
-                  <div class="db-txn-av es-23" >P</div>
-                  <div  class="es-20"><div class="db-txn-nm">From Pristian</div><div class="db-txn-meta">Deposit · USDC</div></div>
-                  <div  class="es-21">10:46 AM</div>
-                  <div class="db-txn-amt db-green">+$8.12</div>
+              </div>
+            </div>
+          </div>
+          <div class="step-text" data-step-text="5">
+            <div class="step-index">Step 05</div>
+            <h3 class="step-title">Instant Bank Withdrawals</h3>
+            <p class="step-copy">Withdraw your balance to any Nigerian bank. Calculate exact fees upfront and choose your ZID alias for recipient privacy.</p>
+            <div class="step-text-media">
+              <div class="ps2">
+                <div class="views-phone-screen">
+                  <img src="To bank clicked-portrait.png" alt="Instant Bank Withdrawals screen" class="step-image active-content">
                 </div>
-                <div class="db-txn-row">
-                  <div class="db-txn-av es-24" >A</div>
-                  <div  class="es-20"><div class="db-txn-nm">Buy BTC</div><div class="db-txn-meta">Crypto · 0x7a3f...D91C</div></div>
-                  <div  class="es-21">9:14 AM</div>
-                  <div class="db-txn-amt db-red">-₦200,000</div>
+              </div>
+            </div>
+          </div>
+          <div class="step-text" data-step-text="6">
+            <div class="step-index">Step 06</div>
+            <h3 class="step-title">Stablecoin Wealth Vault</h3>
+            <p class="step-copy">Protect your wealth from inflation. Convert your fiat to USDC or USDT and earn yields securely with flexible or locked plans.</p>
+            <div class="step-text-media">
+              <div class="ps2">
+                <div class="views-phone-screen">
+                  <img src="Wealth Vault-portrait.png" alt="Stablecoin Wealth Vault screen" class="step-image active-content">
                 </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="phone-stack">
+          <div class="views-phone-shell">
+            <div class="ps2">
+              <div class="views-phone-screen">
+                <img src="Dashboard-portrait.png" alt="Dashboard Overview screen" class="step-image active-content" data-step-image="1">
+                <img src="_Buy crypto_ clicked-portrait.png" alt="Buy Crypto Instantly screen" class="step-image" data-step-image="2">
+                <img src="Deposit via Crypto-portrait.png" alt="Deposit and Auto-Convert screen" class="step-image" data-step-image="3">
+                <img src="Deposit VIA ZID-portrait.png" alt="Receive via ZWAP ID screen" class="step-image" data-step-image="4">
+                <img src="To bank clicked-portrait.png" alt="Instant Bank Withdrawals screen" class="step-image" data-step-image="5">
+                <img src="Wealth Vault-portrait.png" alt="Stablecoin Wealth Vault screen" class="step-image" data-step-image="6">
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-
   </div>
 </section>
 
@@ -1147,14 +1264,14 @@ footer{background:linear-gradient(180deg, #000000 0%, #0a0a0a 100%);padding:64px
   <div class="con">
     <div  class="es-7"><div class="ew rv es-7" >FAQ</div><h2 class="sh rv es-7" >Common questions</h2></div>
     <div class="fw">
-      <div class="fi2"><button class="fb2" onclick="tf(this)">What is ZWAP</button><div class="fba">ZWAP is a crypto &amp; fiat payments platform that automatically converts incoming cryptocurrency to local naira the moment it arrives. You can also buy crypto by wallet address, save in stablecoins, and withdraw to any bank account.</div></div>
-      <div class="fi2"><button class="fb2" onclick="tf(this)">How does the automatic conversion work</button><div class="fba">Send any supported crypto to your ZWAP deposit address. We detect it on-chain, convert to naira at the live rate, deduct 0.85%, and credit your balance — within 30–90 seconds. No action from you.</div></div>
-      <div class="fi2"><button class="fb2" onclick="tf(this)">How do I buy crypto on ZWAP</button><div class="fba">Navigate to Buy Crypto. Select a token, enter the amount, type in any destination wallet address, choose the network, and confirm. ZWAP deducts from your naira balance and sends crypto directly to that wallet. No wallet creation inside ZWAP. No seed phrases needed.</div></div>
-      <div class="fi2"><button class="fb2" onclick="tf(this)">What tokens does ZWAP support</button><div class="fba">18+ tokens including USDT, USDC, BTC, ETH, BNB, SOL, MATIC, ARB, TRX, XRP, DOGE, TON, AVAX, BUSD, DAI, OP, LTC and more — across TRC-20, ERC-20, BEP-20, Base, Solana, Polygon and more networks.</div></div>
-      <div class="fi2"><button class="fb2" onclick="tf(this)">What are the fees</button><div class="fba">Crypto deposits: 0.85% off-ramp fee. Buying crypto: 0.50% platform fee + exact network fee at cost. Naira withdrawals: ₦10 (up to ₦200K) · ₦50 (₦200K–₦1M) · ₦100 (above ₦1M). Naira deposits always free. Minimum withdrawal: ₦100.</div></div>
-      <div class="fi2"><button class="fb2" onclick="tf(this)">What is ZID</button><div class="fba">ZID is your ZWAP Identification Tag — an alias replacing your legal name on transaction records. Counterparties see "ZID-XXXXXX" not your name. All users are fully KYC-verified.</div></div>
-      <div class="fi2"><button class="fb2" onclick="tf(this)">Is ZWAP secure</button><div class="fba">Yes. Full KYC (BVN, NIN, government ID). Funds held with licensed banking partners. Real-time fraud monitoring. ZWAP never stores your private keys — your external wallet is always yours.</div></div>
-      <div class="fi2"><button class="fb2" onclick="tf(this)">Which countries does ZWAP support</button><div class="fba">Live in Nigeria at launch. Ghana, Kenya, and South Africa next. Then Latin America, Southeast Asia, and the Middle East — all regions where crypto-to-fiat infrastructure is severely underserved.</div></div>
+      <div class="fi2"><button type="button" class="fb2" onclick="tf(this)"><span>What is ZWAP</span><span class="fa2" aria-hidden="true">&#9662;</span></button><div class="fba">ZWAP is a crypto &amp; fiat payments platform that automatically converts incoming cryptocurrency to local naira the moment it arrives. You can also buy crypto by wallet address, save in stablecoins, and withdraw to any bank account.</div></div>
+      <div class="fi2"><button type="button" class="fb2" onclick="tf(this)"><span>How does the automatic conversion work</span><span class="fa2" aria-hidden="true">&#9662;</span></button><div class="fba">Send any supported crypto to your ZWAP deposit address. We detect it on-chain, convert to naira at the live rate, deduct 0.85%, and credit your balance — within 30–90 seconds. No action from you.</div></div>
+      <div class="fi2"><button type="button" class="fb2" onclick="tf(this)"><span>How do I buy crypto on ZWAP</span><span class="fa2" aria-hidden="true">&#9662;</span></button><div class="fba">Navigate to Buy Crypto. Select a token, enter the amount, type in any destination wallet address, choose the network, and confirm. ZWAP deducts from your naira balance and sends crypto directly to that wallet. No wallet creation inside ZWAP. No seed phrases needed.</div></div>
+      <div class="fi2"><button type="button" class="fb2" onclick="tf(this)"><span>What tokens does ZWAP support</span><span class="fa2" aria-hidden="true">&#9662;</span></button><div class="fba">18+ tokens including USDT, USDC, BTC, ETH, BNB, SOL, MATIC, ARB, TRX, XRP, DOGE, TON, AVAX, BUSD, DAI, OP, LTC and more — across TRC-20, ERC-20, BEP-20, Base, Solana, Polygon and more networks.</div></div>
+      <div class="fi2"><button type="button" class="fb2" onclick="tf(this)"><span>What are the fees</span><span class="fa2" aria-hidden="true">&#9662;</span></button><div class="fba">Crypto deposits: 0.85% off-ramp fee. Buying crypto: 0.50% platform fee + exact network fee at cost. Naira withdrawals: ₦10 (up to ₦200K) · ₦50 (₦200K–₦1M) · ₦100 (above ₦1M). Naira deposits always free. Minimum withdrawal: ₦100.</div></div>
+      <div class="fi2"><button type="button" class="fb2" onclick="tf(this)"><span>What is ZID</span><span class="fa2" aria-hidden="true">&#9662;</span></button><div class="fba">ZID is your ZWAP Identification Tag — an alias replacing your legal name on transaction records. Counterparties see "ZID-XXXXXX" not your name. All users are fully KYC-verified.</div></div>
+      <div class="fi2"><button type="button" class="fb2" onclick="tf(this)"><span>Is ZWAP secure</span><span class="fa2" aria-hidden="true">&#9662;</span></button><div class="fba">Yes. Full KYC (BVN, NIN, government ID). Funds held with licensed banking partners. Real-time fraud monitoring. ZWAP never stores your private keys — your external wallet is always yours.</div></div>
+      <div class="fi2"><button type="button" class="fb2" onclick="tf(this)"><span>Which countries does ZWAP support</span><span class="fa2" aria-hidden="true">&#9662;</span></button><div class="fba">Live in Nigeria at launch. Ghana, Kenya, and South Africa next. Then Latin America, Southeast Asia, and the Middle East — all regions where crypto-to-fiat infrastructure is severely underserved.</div></div>
     </div>
   </div>
 </section>
@@ -1168,7 +1285,7 @@ footer{background:linear-gradient(180deg, #000000 0%, #0a0a0a 100%);padding:64px
     <h2 class="ctat rv">Crypto &amp; fiat<br/>payments made easy.</h2>
     <p class="ctas-sub rv">Deposit. Buy. Save. Withdraw. Everything in one place — built for you.</p>
     <div class="ctab rv">
-      <a href="https://usezwap.com/user_register" class="bcm">Create Free Account ↗</a>
+      <a href="https://usezwap.com/user_register" class="bcm">Get Started</a>
       <a href="https://usezwap.com/login_auth" class="bco">Log In</a>
     </div>
   </div>
@@ -1188,7 +1305,19 @@ footer{background:linear-gradient(180deg, #000000 0%, #0a0a0a 100%);padding:64px
   </div>
   <div class="fbot">
     <div class="fcp">© 2025 usezwap Ltd. All rights reserved.</div>
-    <div class="fso"><a class="sb" href="#">𝕏</a><a class="sb" href="#">in</a><a class="sb" href="#">ig</a></div>
+    <div class="fso">
+      <a href="https://x.com/usezwap" target="_blank" rel="noopener noreferrer" class="sb" aria-label="X (Twitter)">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4 4l11.733 16h4.267l-11.733 -16z"></path>
+          <path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772"></path>
+        </svg>
+      </a>
+      <a href="https://t.me/davidafiakurue" target="_blank" rel="noopener noreferrer" class="sb" aria-label="Telegram">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21.5 2L2 11.5l6.5 2 2 7.5 3-4 5.5 4 2.5-19z"></path>
+        </svg>
+      </a>
+    </div>
   </div>
 </footer>
 
@@ -1199,9 +1328,12 @@ footer{background:linear-gradient(180deg, #000000 0%, #0a0a0a 100%);padding:64px
 
 <script>
   /* ── FAQ toggle & mobile menu ── */
-  function tf(btn) {
+function tf(btn) {
     const item = btn.parentElement;
-    item.classList.toggle('open');
+    const panel = item.querySelector('.fba');
+    const isOpen = item.classList.contains('open');
+    item.classList.toggle('open', !isOpen);
+    panel.style.maxHeight = !isOpen ? `${panel.scrollHeight}px` : '';
   }
   function toggleMenu() {
     document.getElementById('mobileMenu').classList.toggle('open');
@@ -1251,7 +1383,7 @@ footer{background:linear-gradient(180deg, #000000 0%, #0a0a0a 100%);padding:64px
     });
 
     // Stagger containers specifically
-    gsap.utils.toArray('.sg, .pg, .phone-views-row, .ul').forEach(container => {
+    gsap.utils.toArray('.sg, .pg, .ul').forEach(container => {
       const children = container.children;
       gsap.set(children, { y: 50, opacity: 0 });
       
@@ -1308,6 +1440,57 @@ footer{background:linear-gradient(180deg, #000000 0%, #0a0a0a 100%);padding:64px
       });
     }
     document.querySelectorAll('.snum[data-target]').forEach(animateCounter);
+
+    const viewsSection = document.querySelector('.views-sec');
+    const pinnedViews = viewsSection?.querySelector('.sticky-ui');
+    const stepTexts = Array.from(document.querySelectorAll('.step-text[data-step-text]'));
+    const stepImages = Array.from(document.querySelectorAll('.step-image[data-step-image]'));
+
+    if (viewsSection && pinnedViews && stepTexts.length && stepImages.length) {
+      const totalSteps = Math.min(stepTexts.length, stepImages.length);
+      const setActiveStep = (index) => {
+        stepTexts.forEach((stepText) => {
+          stepText.classList.toggle('active-content', Number(stepText.dataset.stepText) === index);
+        });
+        stepImages.forEach((image) => {
+          image.classList.toggle('active-content', Number(image.dataset.stepImage) === index);
+        });
+      };
+      const syncActiveStep = (progress) => {
+        const nextStep = Math.min(totalSteps, Math.floor(progress * totalSteps) + 1);
+        setActiveStep(nextStep);
+      };
+      const viewsMedia = gsap.matchMedia();
+
+      setActiveStep(1);
+
+      viewsMedia.add("(min-width: 960px)", () => {
+        const viewsTrigger = ScrollTrigger.create({
+          trigger: pinnedViews,
+          start: "top top",
+          end: () => `+=${window.innerHeight * totalSteps}`,
+          pin: true,
+          pinSpacing: true,
+          anticipatePin: 1,
+          invalidateOnRefresh: true,
+          onUpdate: (self) => syncActiveStep(self.progress),
+          onRefresh: (self) => syncActiveStep(self.progress),
+          onLeave: () => setActiveStep(totalSteps),
+          onLeaveBack: () => setActiveStep(1)
+        });
+
+        syncActiveStep(0);
+
+        return () => {
+          viewsTrigger.kill();
+          setActiveStep(1);
+        };
+      });
+
+      viewsMedia.add("(max-width: 959px)", () => {
+        setActiveStep(1);
+      });
+    }
 
     // 3D Tilt for cards
     function initTilt(el, maxTilt) {
