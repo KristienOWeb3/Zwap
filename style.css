@@ -1,0 +1,137 @@
+:root {
+  --bg-deep: #050505;
+  --bg-surface: #0d0f12;
+  --bg-card: #16181d;
+  --accent: #2d62ff;
+  --accent-2: #3d71ff;
+  --accent-glow: rgba(45, 98, 255, 0.3);
+  --accent-soft: rgba(45, 98, 255, 0.14);
+  --text-main: #ffffff;
+  --text-muted: #a1a1aa;
+  --text-soft: #e4e4e7;
+  --border: rgba(255, 255, 255, 0.08);
+  --border-light: var(--border);
+  --border-strong: rgba(255, 255, 255, 0.2);
+  --glass: rgba(13, 15, 18, 0.74);
+  --success: #4ade80;
+  --shadow-heavy: 0 20px 40px rgba(0, 0, 0, 0.6), 0 0 30px rgba(45, 98, 255, 0.08);
+  --shadow-sidebar: 20px 0 50px rgba(0, 0, 0, 0.5);
+  --card-primary-bg: linear-gradient(135deg, #1b2230 0%, #0d0f12 100%);
+  --glow-1: rgba(45, 98, 255, 0.35);
+  --glow-2: rgba(108, 137, 255, 0.22);
+  --fh: 'EB Garamond', Garamond, Baskerville, 'Baskerville Old Face', 'Hoefler Text', 'Times New Roman', serif;
+  --fb: 'EB Garamond', Garamond, Baskerville, 'Baskerville Old Face', 'Hoefler Text', 'Times New Roman', serif;
+  --font-serif: var(--fb);
+  --gd: #333;
+  --gx: #ccc;
+  --g5: #555;
+  --bdl: #e5e5e5;
+
+  /* Backwards-compatible aliases for existing page CSS */
+  --bg-main: var(--bg-deep);
+  --bg-card-alt: var(--bg-card);
+  --bg-sidebar: var(--bg-surface);
+  --bg-nav: var(--glass);
+  --k: var(--bg-deep);
+  --k2: var(--bg-surface);
+  --k3: var(--bg-card);
+  --k4: #1c1f26;
+  --gm: var(--text-muted);
+  --gl: var(--text-soft);
+  --w: var(--text-main);
+  --bd: var(--border);
+  --bd-hover: var(--border-strong);
+}
+
+body.light-mode {
+  --bg-deep: #f4f4f5;
+  --bg-surface: #ffffff;
+  --bg-card: #ffffff;
+  --text-main: #000000;
+  --text-muted: #52525b;
+  --text-soft: #3f3f46;
+  --border: rgba(0, 0, 0, 0.08);
+  --border-strong: rgba(0, 0, 0, 0.12);
+  --glass: rgba(255, 255, 255, 0.65);
+  --shadow-heavy: 0 10px 30px rgba(0, 0, 0, 0.05);
+  --shadow-sidebar: 20px 0 50px rgba(0, 0, 0, 0.08);
+  --card-primary-bg: linear-gradient(135deg, #ffffff 0%, #f0f0f5 100%);
+  --glow-1: #ffe4d6;
+  --glow-2: #e0d4cc;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  background-color: var(--bg-deep);
+  color: var(--text-muted);
+  font-family: var(--fb);
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+
+img,
+video,
+canvas,
+svg {
+  max-width: 100%;
+}
+
+.page-wrapper {
+  position: relative;
+  min-height: 100vh;
+  background-color: var(--bg-deep);
+  overflow-x: hidden;
+}
+
+.page-wrapper > :not(.global-grid):not(.bg-glow) {
+  position: relative;
+  z-index: 1;
+}
+
+.global-grid {
+  position: fixed;
+  inset: 0;
+  background-color: var(--bg-deep);
+  background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="140" height="140"%3E%3Cimage href="ZWap%20logo.png" x="55" y="55" width="30" height="30" opacity="0.04"/%3E%3C/svg%3E');
+  background-repeat: repeat;
+  background-size: 140px 140px;
+  opacity: 1;
+  -webkit-mask-image: radial-gradient(circle 600px at 50% 50%, black 0%, transparent 80%);
+  mask-image: radial-gradient(circle 600px at 50% 50%, black 0%, transparent 80%);
+  -webkit-mask-size: 200% 200%;
+  mask-size: 200% 200%;
+  animation: shimmerGrid 18s infinite alternate ease-in-out;
+  pointer-events: none;
+  z-index: 0;
+}
+
+@keyframes shimmerGrid {
+  0% {
+    -webkit-mask-position: 0% 0%;
+    mask-position: 0% 0%;
+  }
+
+  100% {
+    -webkit-mask-position: 100% 100%;
+    mask-position: 100% 100%;
+  }
+}
+
+nav {
+  background: var(--glass);
+  -webkit-backdrop-filter: blur(28px) saturate(200%);
+  backdrop-filter: blur(28px) saturate(200%);
+  border: 1px solid var(--border);
+}

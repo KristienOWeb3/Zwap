@@ -1,0 +1,10 @@
+588: .ctas-sec{background:var(--w);text-align:center;padding:104px 64px}
+589: .ctat{font-family:var(--fh);font-size:clamp(38px,5vw,64px);font-weight:800;color:var(--k);letter-spacing:-1.5px;line-height:1.08;margin-bottom:20px}
+592: .bcm{padding:16px 32px;background:var(--k);border:none;border-radius:10px;color:var(--w);font-family:var(--fb);font-size:15px;font-weight:700;cursor:pointer;transition:all .2s;text-decoration:none;display:inline-block}
+593: .bcm:hover{background:var(--gd);transform:translateY(-2px)}
+594: .bco{padding:16px 32px;background:transparent;border:1px solid var(--bdl);border-radius:10px;color:var(--k);font-family:var(--fb);font-size:15px;font-weight:600;cursor:pointer;transition:all .2s;text-decoration:none;display:inline-block}
+595: .bco:hover{border-color:var(--k)}
+635: .bh2,.bp2,.bcm{transition:all .2s ease-out;will-change:transform;position:relative;overflow:hidden}
+636: .bh2:active,.bp2:active,.bcm:active,.bho2:active,.bg2:active,.bco:active{transform:scale(0.96)!important}
+718:   .ctas-sec{padding:72px 24px}
+1346:     document.querySelectorAll('.bh2, .bp2, .bcm').forEach(btn => {

@@ -1,0 +1,80 @@
+324: .desktop-frame{
+334: .desk-body{padding:0;background:radial-gradient(circle at 50% 0%, #1a1a1a 0%, #000000 80%);}
+337: .db-header{background:rgba(10, 10, 10, 0.6);-webkit-backdrop-filter:blur(24px) saturate(180%);backdrop-filter:blur(24px) saturate(180%);padding:14px 22px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--bd)}
+338: .db-logo{font-family: var(--fh);font-size:16px;font-weight:800;color:#fff}
+339: .db-nav{display:flex;gap:18px}
+340: .db-nav-item{font-size:11px;color:var(--gm);cursor:pointer}
+341: .db-nav-item.active{color:#fff;font-weight:600}
+342: .db-user{display:flex;align-items:center;gap:9px}
+343: .db-av{width:26px;height:26px;border-radius:50%;background:#000;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:800;color:#fff}
+344: .db-uname{font-size:11px;font-weight:600;color:#fff}
+346: .db-content{display:grid;grid-template-columns:230px 1fr;gap:0;min-height:300px}
+347: .db-sidebar{background:#000000;padding:16px 14px;border-right:1px solid var(--bd)}
+348: .db-menu-item{display:flex;align-items:center;gap:9px;padding:8px 9px;border-radius:12px;font-size:11px;color:var(--gm);margin-bottom:3px;cursor:pointer}
+349: .db-menu-item.active{background:rgba(255, 255, 255, 0.08);color:#ffffff;font-weight:600}
+350: .db-menu-icon{font-size:13px;width:16px}
+352: .db-main{padding:18px 20px;background:transparent}
+353: .db-cards-row{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:16px}
+354: .db-card{background:var(--k2);border:1px solid var(--bd);border-radius:24px;padding:14px 16px;box-shadow:0 10px 30px rgba(0,0,0,0.5)}
+360: .db-txn-section{background:var(--k2);border-radius:24px;padding:14px 16px;border:1px solid var(--bd)}
+361: .db-txn-head{display:flex;justify-content:space-between;margin-bottom:12px}
+362: .db-txn-title{font-size:11px;font-weight:700;color:#fff}
+363: .db-txn-see{font-size:10px;color:var(--gm)}
+364: .db-txn-row{display:flex;align-items:center;gap:9px;padding:7px 0;border-bottom:1px solid rgba(255, 255, 255, 0.05)}
+365: .db-txn-row:last-child{border:none}
+366: .db-txn-av{width:24px;height:24px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:800;color:#fff}
+367: .db-txn-nm{font-size:10px;font-weight:600;color:#ffffff;flex:1}
+368: .db-txn-meta{font-size:9px;color:var(--gm)}
+369: .db-txn-amt{font-size:10px;font-weight:700}
+370: .db-green{color:#10B981}.db-red{color:#dc2626}
+618: .phone-outer,.desktop-frame{transition:transform .15s ease-out;transform-style:preserve-3d;will-change:transform}
+625: .phone-outer:hover .tilt-glare-inner,.desktop-frame:hover .tilt-glare-inner{opacity:1}
+764: .pc, .db-card, .bal-card, .save-vault-card {
+953:       <div class="desktop-frame es-10" >
+962:         <div class="desk-body">
+964:           <div class="db-header">
+966:             <div class="db-nav">
+967:               <div class="db-nav-item active">Dashboard</div>
+968:               <div class="db-nav-item">Buy Crypto</div>
+969:               <div class="db-nav-item">Savings</div>
+970:               <div class="db-nav-item">Cards</div>
+971:               <div class="db-nav-item">Transactions</div>
+973:             <div class="db-user">
+974:               <div class="db-av">D</div>
+975:               <div><div class="db-uname">Afiakurue David</div><div  class="es-16">ZID-4X9RK2</div></div>
+978:           <div class="db-content">
+979:             <div class="db-sidebar">
+981:               <div class="db-menu-item active"><span class="db-menu-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="color:currentColor;"><rect width="7" height="9" x="3" y="3" rx="1"/><rect width="7" height="5" x="14" y="3" rx="1"/><rect width="7" height="9" x="14" y="12" rx="1"/><rect width="7" height="5" x="3" y="16" rx="1"/></svg></span>Overview</div>
+982:               <div class="db-menu-item"><span class="db-menu-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="color:currentColor;"><path d="M11.767 19.089c4.924.868 6.14-6.025 1.216-6.894m-1.216 6.894L5.86 18.04m5.908 1.05-1.547-8.77m1.547 8.77-.457 2.59m-5.45-3.64-1.546-8.77m1.546 8.77-.457 2.59M9.131 5.642c4.398.775 5.234-5.352.836-6.127M9.131 5.642 3.82 4.706m5.312.936-1.546-8.77m-3.766 7.834L2.274 2.115M11.767 19.089c5.187.915 6.46-6.326 1.273-7.24M2.274 2.115l-1.89-3.23"/></svg></span>Buy Crypto</div>
+983:               <div class="db-menu-item"><span class="db-menu-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="color:currentColor;"><line x1="12" y1="5" x2="12" y2="19"/><polyline points="19 12 12 19 5 12"/></svg></span>Deposit</div>
+984:               <div class="db-menu-item"><span class="db-menu-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="color:currentColor;"><line x1="12" y1="19" x2="12" y2="5"/><polyline points="5 12 12 5 19 12"/></svg></span>Withdraw</div>
+985:               <div class="db-menu-item"><span class="db-menu-icon"></span>Savings</div>
+986:               <div class="db-menu-item"><span class="db-menu-icon"><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="color:var(--bd);"><rect width="20" height="14" x="2" y="5" rx="2"/><line x1="2" x2="22" y1="10" y2="10"/></svg></span>Cards</div>
+988:               <div class="db-menu-item"><span class="db-menu-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="color:currentColor;"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg></span>Settings</div>
+989:               <div class="db-menu-item"><span class="db-menu-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="color:currentColor;"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg></span>Support</div>
+991:             <div class="db-main">
+993:               <div class="db-cards-row">
+994:                 <div class="db-card dark">
+999:                 <div class="db-card">
+1004:                 <div class="db-card">
+1010:               <div class="db-txn-section">
+1011:                 <div class="db-txn-head">
+1012:                   <div class="db-txn-title">Recent Transactions</div>
+1013:                   <div class="db-txn-see">View all ↗</div>
+1015:                 <div class="db-txn-row">
+1016:                   <div class="db-txn-av es-19" >D</div>
+1017:                   <div  class="es-20"><div class="db-txn-nm">From David Z.</div><div class="db-txn-meta">Deposit · USDT</div></div>
+1019:                   <div class="db-txn-amt db-green">+$62.30</div>
+1021:                 <div class="db-txn-row">
+1022:                   <div class="db-txn-av es-22" >D</div>
+1023:                   <div  class="es-20"><div class="db-txn-nm">To Daniel Xue</div><div class="db-txn-meta">Transfer · Naira</div></div>
+1025:                   <div class="db-txn-amt db-red">-$14.35</div>
+1027:                 <div class="db-txn-row">
+1028:                   <div class="db-txn-av es-23" >P</div>
+1029:                   <div  class="es-20"><div class="db-txn-nm">From Pristian</div><div class="db-txn-meta">Deposit · USDC</div></div>
+1031:                   <div class="db-txn-amt db-green">+$8.12</div>
+1033:                 <div class="db-txn-row">
+1034:                   <div class="db-txn-av es-24" >A</div>
+1035:                   <div  class="es-20"><div class="db-txn-nm">Buy BTC</div><div class="db-txn-meta">Crypto · 0x7a3f...D91C</div></div>
+1037:                   <div class="db-txn-amt db-red">-₦200,000</div>
+1355:     document.querySelectorAll('.desktop-frame').forEach(el => initTilt(el, 8));

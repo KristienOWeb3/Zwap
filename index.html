@@ -43,33 +43,39 @@ img,video,canvas,svg{max-width:100%}
 /* ── NAV — SEAMLESS DARK HEADER ── */
 nav {
   position: fixed;
-  top: 24px;
+  top: 0;
   left: 0;
   right: 0;
   z-index: 100;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 14px 42px;
+  padding: 24px 64px;
   margin-inline: auto;
+  max-width: 100%;
+  width: 100%;
+  border-radius: 0;
+  background: transparent;
+  border-color: transparent;
+  box-shadow: none;
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  overflow: hidden;
+}
+
+nav.nav-scrolled {
+  top: 24px;
   max-width: 800px;
   width: 90%;
   border-radius: 24px;
-
-  /* Layer 1 & 2: Surface & Refraction */
+  padding: 14px 42px;
   background: rgba(255, 255, 255, 0.03);
   -webkit-backdrop-filter: blur(28px) saturate(200%);
   backdrop-filter: blur(28px) saturate(200%);
-
-  /* Layer 4: Fresnel Gloss Border */
   border-top: 1px solid rgba(255, 255, 255, 0.2);
   border-right: 1px solid rgba(255, 255, 255, 0.1);
   border-left: 1px solid rgba(255, 255, 255, 0.1);
   border-bottom: 1px solid rgba(255, 255, 255, 0.06);
-
-  /* Layer 5: Elevation & Inner Box Shadow */
   box-shadow: 0 16px 32px rgba(0, 0, 0, 0.5), inset 0 1px 1px rgba(255, 255, 255, 0.1);
-  overflow: hidden; /* Clips Layer 3 perfectly */
 }
 
 /* Layer 3: Spectral Aberration Pseudo-element */
@@ -79,9 +85,14 @@ nav::before {
   inset: 0;
   z-index: -1;
   background: linear-gradient(110deg, rgba(255,0,0,1), rgba(0,255,0,1), rgba(0,0,255,1));
-  opacity: 0.05;
+  opacity: 0;
   filter: blur(12px);
   pointer-events: none;
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+nav.nav-scrolled::before {
+  opacity: 0.05;
 }
 .logo{
   font-family: var(--fh);font-size:18px;font-weight:800;
@@ -120,6 +131,7 @@ nav::before {
   padding:130px 64px 0px;
   position:relative;
   overflow:hidden;
+  z-index:1;
   background: radial-gradient(circle at 50% 40%, #555555 0%, #111111 80%, #000000 100%);
 }
 
@@ -334,7 +346,7 @@ section{padding:104px 64px;position:relative}
 }
 .desk-dot{width:10px;height:10px;border-radius:50%}
 .desk-url{flex:1;background:#1a1a1a;border-radius:6px;padding:5px 12px;font-size:11px;color:#555;font-family:var(--fb);margin:0 12px}
-.desk-body{padding:0;background:radial-gradient(circle at 50% 0%, #1a1a1a 0%, #000000 80%);}
+.desk-body{padding:0;background:radial-gradient(circle at 50% 0%, #222222 0%, #000000 80%);}
 
 /* Dashboard header */
 .db-header{background:rgba(10, 10, 10, 0.6);-webkit-backdrop-filter:blur(24px) saturate(180%);backdrop-filter:blur(24px) saturate(180%);padding:14px 22px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--bd)}
@@ -347,7 +359,7 @@ section{padding:104px 64px;position:relative}
 .db-uname{font-size:11px;font-weight:600;color:#fff}
 
 .db-content{display:grid;grid-template-columns:230px 1fr;gap:0;min-height:300px}
-.db-sidebar{background:#000000;padding:16px 14px;border-right:1px solid var(--bd)}
+.db-sidebar{background:#111111;padding:16px 14px;border-right:1px solid var(--bd)}
 .db-menu-item{display:flex;align-items:center;gap:9px;padding:8px 9px;border-radius:12px;font-size:11px;color:var(--gm);margin-bottom:3px;cursor:pointer}
 .db-menu-item.active{background:rgba(255, 255, 255, 0.08);color:#ffffff;font-weight:600}
 .db-menu-icon{font-size:13px;width:16px}
@@ -373,6 +385,7 @@ section{padding:104px 64px;position:relative}
 .db-green{color:#10B981}.db-red{color:#dc2626}
 
 /* ── HOW IT WORKS ── */
+.how { z-index: 10; position: relative; }
 /* 1. The Container: Switch from Grid to Flexbox */
 .sg {
   display: flex;
@@ -667,24 +680,7 @@ section{padding:104px 64px;position:relative}
 /* Card section */
 .ci{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
 .cv{position:relative;height:300px;display:flex;align-items:center;justify-content:center;overflow:hidden}
-.vw{position:absolute;width:340px;max-width:100%;height:214px;border-radius:18px;padding:24px;display:flex;flex-direction:column;justify-content:space-between;transition:all 0.4s ease}
-.vm{background:linear-gradient(135deg, #ffffff 0%, #f0f0f0 100%);box-shadow:0 30px 60px rgba(0,0,0,.6),0 0 80px rgba(192,200,210,.5),inset 0 0 25px rgba(255,255,255,.5);z-index:2;transform:rotate(0deg);animation:floatMain 6s ease-in-out infinite}
-.vb{background:linear-gradient(135deg, #1a1a1a 0%, #333 100%);border:1px solid #444;box-shadow:0 20px 40px rgba(0,0,0,.6),0 0 60px rgba(170,180,190,.3);z-index:1;transform:rotate(4deg) translateX(30px);animation:floatBack 7s ease-in-out infinite 0.5s}
-@keyframes floatMain{0%,100%{transform:translateY(0) rotate(0deg)}50%{transform:translateY(-15px) rotate(1deg)}}
-@keyframes floatBack{0%,100%{transform:translateY(0) rotate(4deg) translateX(30px)}50%{transform:translateY(-10px) rotate(5deg) translateX(30px)}}
-.vn{font-family:var(--fh);font-size:18px;font-weight:700;letter-spacing:3px}
-.vm .vn{color:var(--k)}
-.vb .vn{color:var(--gl)}
-.vrow{display:flex;justify-content:space-between;align-items:flex-end}
-.vfl{font-size:11px;text-transform:uppercase;letter-spacing:.5px}
-.vm .vfl{color:var(--gm)}
-.vb .vfl{color:var(--gd)}
-.vfv{font-size:15px;font-weight:800;font-family:var(--fh);color:var(--w)}
-.vm .vfv{color:var(--k)}
-.vb .vfv{color:var(--w)}
-.vvisa{font-family:var(--fh);font-size:22px;font-weight:800}
-.vm .vvisa{color:#1a1a1a;font-style:italic}
-.vb .vvisa{color:var(--gd)}
+
 .cfl{list-style:none;margin-top:36px}
 .cfl li{display:flex;gap:14px;align-items:flex-start;padding:13px 0;border-bottom:1px solid var(--bd);font-size:15px;color:var(--gx)}
 .cfl li:last-child{border:none}
@@ -712,7 +708,7 @@ section{padding:104px 64px;position:relative}
 .bco:hover{border-color:var(--k)}
 
 /* Footer */
-footer{background:linear-gradient(180deg, #000000 0%, #0a0a0a 100%);padding:64px 64px 36px;position:relative;overflow:hidden}
+footer{background:linear-gradient(180deg, #000000 0%, #111111 100%);padding:64px 64px 36px;position:relative;overflow:hidden}
 .fg2{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:2.2fr 1fr 1fr 1fr;gap:48px;padding-bottom:48px;border-bottom:1px solid var(--bd);position:relative;z-index:1}
 .flo{font-family:var(--fh);font-size:24px;font-weight:800;color:var(--w);margin-bottom:14px}
 .fde{font-size:14px;color:var(--gm);line-height:1.8;max-width:260px}
@@ -765,30 +761,62 @@ footer{background:linear-gradient(180deg, #000000 0%, #0a0a0a 100%);padding:64px
 /* Mobile Menu */
 .mobile-menu-overlay{
   position:fixed;top:0;left:0;right:0;bottom:0;
-  background:rgba(5, 5, 5, 0.75);z-index:99;
+  background:rgba(5, 5, 5, 0.75);z-index:999;
   -webkit-backdrop-filter: blur(24px) saturate(180%);
   backdrop-filter: blur(24px) saturate(180%);
   display:flex;flex-direction:column;justify-content:center;align-items:center;
   opacity:0;visibility:hidden;transition:opacity 0.3s;
 }
 .mobile-menu-overlay.open{opacity:1;visibility:visible}
-.mobile-menu-overlay a{
-  color:#fff;font-size:26px;margin:16px 0;
-  text-decoration:none;font-family: var(--fh);font-weight:700;
+.mobile-menu-overlay > a {
+  display: block;
+  text-align: center;
+  margin: 10px 0;
+  padding: 18px 48px;
+  color: #fff;
+  font-size: 22px;
+  text-decoration: none;
+  font-family: var(--fh);
+  font-weight: 700;
+  position: relative;
+  overflow: hidden;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.03);
+  -webkit-backdrop-filter: blur(28px) saturate(200%);
+  backdrop-filter: blur(28px) saturate(200%);
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.5), inset 0 1px 1px rgba(255, 255, 255, 0.1);
 }
-.mobile-menu-overlay a.es-3{color:#000;}
-.close-btn{
-  position:absolute;top:22px;right:22px;color:#fff;font-size:30px;cursor:pointer;
-  width:44px;height:44px;border-radius:50%;background:rgba(255,255,255,.1);
-  display:flex;align-items:center;justify-content:center;transition:background .3s;
+.mobile-menu-overlay > a::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(110deg, rgba(255,0,0,1), rgba(0,255,0,1), rgba(0,0,255,1));
+  opacity: 0.05;
+  filter: blur(12px);
+  pointer-events: none;
 }
-.close-btn:hover{background:rgba(255,255,255,.2)}
-.menu-toggle{
-  display:none;font-size:24px;color:#FFFFFF;cursor:pointer;z-index:101;
-  width:42px;height:42px;border-radius:8px;background:rgba(255,255,255,.1);
-  align-items:center;justify-content:center;transition:background .3s;
+.mobile-menu-overlay .es-2, .mobile-menu-overlay .es-3 { color: #ffffff !important; text-decoration: none !important; }
+.mobile-menu-overlay a.es-3 { color: #000000 !important; }
+.menu-toggle, .close-btn {
+  display:none;cursor:pointer;z-index:101;
+  width:44px;height:44px;border-radius:8px;background:rgba(255,255,255,.1);
+  transition:background .3s;
+  position: relative;
 }
-.menu-toggle:hover{background:rgba(255,255,255,.2)}
+.close-btn {
+  display: block; position: absolute; top: 22px; right: 22px; background: rgba(255,255,255,.1); border-radius: 50%; width: 44px; height: 44px;
+}
+.menu-toggle:hover, .close-btn:hover {background:rgba(255,255,255,.2)}
+.menu-toggle .line, .close-btn .line {
+  position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width: 22px; height: 2px; background: #fff; border-radius: 2px; transition: none;
+}
+.menu-toggle .line:nth-child(1), .close-btn .line:nth-child(1) { margin-top: -8px; }
+.menu-toggle .line:nth-child(3), .close-btn .line:nth-child(3) { margin-top: 8px; }
 
 /* ── MOBILE ── */
 @media(max-width:960px){
@@ -844,7 +872,7 @@ footer{background:linear-gradient(180deg, #000000 0%, #0a0a0a 100%);padding:64px
   .ui{gap:44px}
   .term{margin-top:36px}
   .cv{height:400px;margin-top:36px}
-  .vw{width:min(100%,340px)}
+
   footer{padding:48px 24px 28px}
   .fg2{grid-template-columns:1fr 1fr;gap:36px}
   .fbot{flex-direction:column;gap:14px}
@@ -867,9 +895,7 @@ footer{background:linear-gradient(180deg, #000000 0%, #0a0a0a 100%);padding:64px
   .fba{padding:0 20px;font-size:15px}
   .fi2.open .fba{padding:0 20px 18px}
   .cv{height:320px}
-  .vw{width:min(100%,300px);padding:20px}
-  .vm{transform:none;animation:none}
-  .vb{transform:rotate(3deg) translateX(12px);animation:none}
+
 }
 
 /* Extracted Inline Styles */
@@ -924,7 +950,7 @@ footer{background:linear-gradient(180deg, #000000 0%, #0a0a0a 100%);padding:64px
 
 <!-- MOBILE MENU -->
 <div class="mobile-menu-overlay" id="mobileMenu">
-  <div class="close-btn" onclick="toggleMenu()">×</div>
+  <div class="close-btn" onclick="toggleMenu()"><span class="line"></span><span class="line"></span><span class="line"></span></div>
   <a href="#features" onclick="toggleMenu()">Features</a>
   <a href="#views" onclick="toggleMenu()">App Views</a>
   <a href="#card" onclick="toggleMenu()">Card</a>
@@ -950,7 +976,7 @@ footer{background:linear-gradient(180deg, #000000 0%, #0a0a0a 100%);padding:64px
   <div class="nc">
     <a href="https://usezwap.com/login_auth" class="bg2">Log In</a>
     <a href="https://usezwap.com/user_register" class="bp2">Get Started</a>
-    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    <div class="menu-toggle" onclick="toggleMenu()"><span class="line"></span><span class="line"></span><span class="line"></span></div>
   </div>
 </nav>
 
@@ -1072,7 +1098,6 @@ footer{background:linear-gradient(180deg, #000000 0%, #0a0a0a 100%);padding:64px
       <div class="con split-layout">
         <div class="text-stack">
           <div class="step-text active-content" data-step-text="1">
-            <div class="step-index">Step 01</div>
             <h3 class="step-title">Dashboard Overview</h3>
             <p class="step-copy">Your financial command center. Track your entire portfolio across all assets, review full transaction history, and manage your funds instantly.</p>
             <div class="step-text-media">
@@ -1084,7 +1109,6 @@ footer{background:linear-gradient(180deg, #000000 0%, #0a0a0a 100%);padding:64px
             </div>
           </div>
           <div class="step-text" data-step-text="2">
-            <div class="step-index">Step 02</div>
             <h3 class="step-title">Buy Crypto Instantly</h3>
             <p class="step-copy">Convert your Naira to crypto effortlessly. Purchase massive volumes with transparent, low fees and send directly to any external wallet.</p>
             <div class="step-text-media">
@@ -1096,7 +1120,6 @@ footer{background:linear-gradient(180deg, #000000 0%, #0a0a0a 100%);padding:64px
             </div>
           </div>
           <div class="step-text" data-step-text="3">
-            <div class="step-index">Step 03</div>
             <h3 class="step-title">Deposit &amp; Auto-Convert</h3>
             <p class="step-copy">Deposit stablecoins or major tokens seamlessly from any supported network. Get credited in seconds with the best available routing.</p>
             <div class="step-text-media">
@@ -1108,7 +1131,6 @@ footer{background:linear-gradient(180deg, #000000 0%, #0a0a0a 100%);padding:64px
             </div>
           </div>
           <div class="step-text" data-step-text="4">
-            <div class="step-index">Step 04</div>
             <h3 class="step-title">Receive via ZWAP ID</h3>
             <p class="step-copy">Receive zero-fee transfers instantly. Share your unique ZID or QR code with any ZWAP user for immediate, secure funding without exposing bank details.</p>
             <div class="step-text-media">
@@ -1120,7 +1142,6 @@ footer{background:linear-gradient(180deg, #000000 0%, #0a0a0a 100%);padding:64px
             </div>
           </div>
           <div class="step-text" data-step-text="5">
-            <div class="step-index">Step 05</div>
             <h3 class="step-title">Instant Bank Withdrawals</h3>
             <p class="step-copy">Withdraw your balance to any Nigerian bank. Calculate exact fees upfront and choose your ZID alias for recipient privacy.</p>
             <div class="step-text-media">
@@ -1132,7 +1153,6 @@ footer{background:linear-gradient(180deg, #000000 0%, #0a0a0a 100%);padding:64px
             </div>
           </div>
           <div class="step-text" data-step-text="6">
-            <div class="step-index">Step 06</div>
             <h3 class="step-title">Stablecoin Wealth Vault</h3>
             <p class="step-copy">Protect your wealth from inflation. Convert your fiat to USDC or USDT and earn yields securely with flexible or locked plans.</p>
             <div class="step-text-media">
@@ -1235,23 +1255,7 @@ footer{background:linear-gradient(180deg, #000000 0%, #0a0a0a 100%);padding:64px
         </div>
       </div>
       <div class="cv rv">
-        <div class="vw vb">
-          <div  class="es-28"><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="color:var(--bd);"><rect width="20" height="14" x="2" y="5" rx="2"/><line x1="2" x2="22" y1="10" y2="10"/></svg></div>
-          <div class="vn es-29" >**** **** **** ****</div>
-          <div class="vrow">
-            <div><div class="vfl">CARDHOLDER</div><div class="vfv">*** ***</div></div>
-            <div class="vvisa es-30" >VISA</div>
-          </div>
-        </div>
-        <div class="vw vm">
-          <div  class="es-31"><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="color:var(--bd);"><rect width="20" height="14" x="2" y="5" rx="2"/><line x1="2" x2="22" y1="10" y2="10"/></svg></div>
-          <div class="vn">**** &nbsp;**** &nbsp;**** &nbsp;****</div>
-          <div class="vrow">
-            <div><div class="vfl">Card Holder</div><div class="vfv">*** ***</div></div>
-            <div  class="es-32"><div class="vfl">Expires</div><div class="vfv">**/**</div></div>
-          </div>
-          <div  class="es-33"><div class="vvisa">VISA</div></div>
-        </div>
+        <img src="ZWAP CARD.png" alt="ZWAP Visa Card" style="width: 100%; max-width: 400px; height: auto; border-radius: 16px;">
       </div>
     </div>
   </div>
@@ -1336,7 +1340,24 @@ function tf(btn) {
     panel.style.maxHeight = !isOpen ? `${panel.scrollHeight}px` : '';
   }
   function toggleMenu() {
-    document.getElementById('mobileMenu').classList.toggle('open');
+    const menu = document.getElementById('mobileMenu');
+    const isOpen = menu.classList.contains('open');
+    const closeLines = document.querySelectorAll('.close-btn .line');
+    if (!isOpen) {
+      menu.classList.add('open');
+      gsap.fromTo("#mobileMenu > a", 
+        { opacity: 0, y: 20, scale: 0.95 },
+        { opacity: 1, y: 0, scale: 1, stagger: 0.1, duration: 0.5, ease: "power3.out" }
+      );
+      gsap.to(closeLines[0], { marginTop: 0, rotation: 45, duration: 0.3 });
+      gsap.to(closeLines[1], { opacity: 0, duration: 0.3 });
+      gsap.to(closeLines[2], { marginTop: 0, rotation: -45, duration: 0.3 });
+    } else {
+      menu.classList.remove('open');
+      gsap.to(closeLines[0], { marginTop: -8, rotation: 0, duration: 0.3 });
+      gsap.to(closeLines[1], { opacity: 1, duration: 0.3 });
+      gsap.to(closeLines[2], { marginTop: 8, rotation: 0, duration: 0.3 });
+    }
   }
 
   document.addEventListener('DOMContentLoaded', function () {
@@ -1360,6 +1381,51 @@ function tf(btn) {
 
     // 2. Initialize GSAP ScrollTrigger
     gsap.registerPlugin(ScrollTrigger);
+
+    // --- NAV MORPHING HEADER (UNIFIED) ---
+    ScrollTrigger.create({
+      trigger: document.body,
+      start: "top top",
+      end: "max",
+      onUpdate: (self) => {
+        const scrollY = window.scrollY || document.documentElement.scrollTop;
+        const nav = document.querySelector('nav');
+        const viewsSec = document.querySelector('.views-sec');
+        let inViews = false;
+        
+        if (viewsSec) {
+          const rect = viewsSec.getBoundingClientRect();
+          if (rect.top <= 80 && rect.bottom >= 80) {
+            inViews = true;
+          }
+        }
+        
+        if (scrollY > 50 && !inViews) {
+          nav.classList.add('nav-scrolled');
+        } else {
+          nav.classList.remove('nav-scrolled');
+        }
+      }
+    });
+
+    // --- HERO STACKED CARD ANIMATION ---
+    ScrollTrigger.create({
+      trigger: ".hero",
+      start: "top top",
+      pin: true,
+      pinSpacing: false
+    });
+
+    gsap.to(".hero .hi", {
+      opacity: 0.2,
+      scale: 0.95,
+      scrollTrigger: {
+        trigger: ".how",
+        start: "top bottom",
+        end: "top top",
+        scrub: true
+      }
+    });
 
     // Fade-up animations for .rv and .txt-stagger elements
     const fadeElements = document.querySelectorAll('.rv, .txt-stagger, .sc, .pc');

@@ -1,0 +1,27 @@
+Please update my HTML/CSS for the ZWAP landing page to fix three specific UI/UX issues. Use the provided code as your base.
+
+1. Fix Mobile Horizontal Overflow (Black space on the right)
+
+Issue: On mobile devices, the content shrinks or pushes to the left, leaving a large blank black section on the right side of the screen.
+
+Action: Audit the CSS for elements that are breaking the viewport width. Check for fixed pixel widths on images, excessive padding on the .hero or .hi containers in the mobile media queries, or absolute positioned elements pushing boundaries. Ensure max-width: 100vw; and overflow-x: hidden; are strictly enforced on the body/wrapper, and all child elements scale fluidly (max-width: 100%;).
+
+2. Fix "5 Core Pillars" Mobile Proportions
+
+Issue: In mobile mode (@media(max-width: 600px)), the 5 core pillar cards (.pc inside .pg) stack into a single column but look excessively long and thin.
+
+Action: Update the mobile media query for .pc. Override the default min-height: 360px; to something much smaller (e.g., min-height: auto; or 200px) so the cards adapt tightly to their text content. Adjust the mobile padding inside .pc so they look like well-proportioned, compact cards rather than elongated boxes.
+
+3. Redesign the FAQ Section (Both Desktop & Mobile)
+
+Issue: The FAQ section (.fw, .fi2, .fb2) currently looks like a flat list with bottom borders. It needs to look like distinct dropdown widgets.
+
+Action: >     * Remove the border-bottom from .fi2.
+
+Style each FAQ item container (.fi2) as its own separated rounded rectangle (e.g., add background: var(--k2); border: 1px solid var(--bd); border-radius: 16px; margin-bottom: 16px; overflow: hidden;).
+
+Update the toggle icon (.fa2). Instead of whatever character is currently there, implement an explicit upside-down triangle or chevron down icon.
+
+Ensure the triangle rotates 180 degrees upwards smoothly when the .open class is active on .fi2.
+
+Please return the corrected CSS and any necessary HTML structural adjustments to achieve this exact result.
